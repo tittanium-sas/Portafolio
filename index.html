@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Tittanium 2026</title>
+    <meta name="description" content="Portafolio interactivo de Tittanium - Tecnología simple, intuitiva y útil.">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- ✅ RUTA CORREGIDA: mismo nivel que index.html -->
+    <link rel="stylesheet" href="portafolio.css">
+</head>
+
+<body>
+    <!-- Navegación Lateral (Dashboard Style) -->
+    <nav class="sidebar">
+        <div class="logo">
+            <img src="logo-tittanium.png" alt="Logo Tittanium">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#inicio" class="active"><i class="fa-solid fa-house"></i> Inicio</a></li>
+            <li><a href="#quienes-somos"><i class="fa-solid fa-users"></i> Quiénes Somos</a></li>
+            <li><a href="#servicios"><i class="fa-solid fa-cloud"></i> Servicios</a></li>
+            <li><a href="#equipo"><i class="fa-solid fa-id-badge"></i> Equipo</a></li>
+            <li><a href="#diferencia"><i class="fa-solid fa-lightbulb"></i> Nuestra Diferencia</a></li>
+            <li><a href="#contacto"><i class="fa-solid fa-envelope"></i> Contacto</a></li>
+        </ul>
+        <div class="sidebar-footer">
+            <a href="https://www.tittanium.co" target="_blank" class="web-link"><i class="fa-solid fa-globe"></i>
+                www.tittanium.co</a>
+        </div>
+    </nav>
+
+    <!-- Botón menú móvil -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+
+        <!-- Sección: Inicio / Hero -->
+        <section id="inicio" class="dashboard-card hero-section">
+            <div class="hero-content">
+                <span class="badge">Portafolio 2026</span>
+                <h1>Tecnología poderosa, <span class="text-green">simple e intuitiva</span>.</h1>
+                <p>Transformamos lo complejo en algo útil para tu vida y tu negocio. Hablamos tu idioma y solucionamos
+                    tus problemas de manera directa.</p>
+                <a href="#servicios" class="btn-primary">Explorar Servicios <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="hero-visual">
+                <i class="fa-solid fa-rocket"></i>
+            </div>
+        </section>
+
+        <!-- Sección: Quiénes Somos -->
+        <section id="quienes-somos" class="dashboard-card">
+            <h2><i class="fa-solid fa-users-gear"></i> ¡Quiénes Somos!</h2>
+            <p class="section-desc">En Tittanium, creemos que la tecnología no tiene que ser compleja para ser poderosa.
+                Nuestra misión es hacer que lo técnico sea simple, intuitivo y sobre todo, útil. Trabajamos para
+                entender tus necesidades desde lo humano.</p>
+        </section>
+
+        <!-- Sección: Qué Hacemos (Servicios) -->
+        <section id="servicios">
+            <h2 class="section-title">¿Qué hacemos?</h2>
+            <p class="section-desc-center">Transformamos lo complejo en algo simple y útil para tu día a día.</p>
+
+            <div class="services-grid">
+                <!-- Tarjeta: Servicios en la Nube -->
+                <div class="dashboard-card service-card">
+                    <div class="card-header">
+                        <i class="fa-solid fa-cloud icon-green"></i>
+                        <h3>Servicios en la Nube</h3>
+                    </div>
+                    <p>Mantenemos tu infraestructura optimizada, confiable y segura, sin interrupciones.</p>
+
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="38">0</span><span class="stat-symbol">%</span>
+                            <p>Reducción Costos Mensuales</p>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="80">0</span><span class="stat-symbol">%</span>
+                            <p>Copias de Seguridad Automáticas</p>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="90">0</span><span class="stat-symbol">%</span>
+                            <p>Puntaje de Seguridad</p>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="95">0</span><span class="stat-symbol">%</span>
+                            <p>Alertamiento (Costos/Amenazas)</p>
+                        </div>
+                    </div>
+
+                    <div class="chart-container">
+                        <h4>Costo Infraestructura: On-premise vs Nube (USD)</h4>
+                        <div class="bar-chart">
+                            <div class="bar-group">
+                                <span class="bar-label">1 Año</span>
+                                <div class="bar on-premise" style="height: 40%;"><span>$12k</span></div>
+                                <div class="bar cloud" style="height: 25%;"><span>$7k</span></div>
+                            </div>
+                            <div class="bar-group">
+                                <span class="bar-label">3 Años</span>
+                                <div class="bar on-premise" style="height: 70%;"><span>$21k</span></div>
+                                <div class="bar cloud" style="height: 35%;"><span>$10k</span></div>
+                            </div>
+                            <div class="bar-group">
+                                <span class="bar-label">5 Años</span>
+                                <div class="bar on-premise" style="height: 100%;"><span>$30k</span></div>
+                                <div class="bar cloud" style="height: 45%;"><span>$13k</span></div>
+                            </div>
+                        </div>
+                        <div class="chart-legend">
+                            <span><span class="dot on-premise-dot"></span> On-premise</span>
+                            <span><span class="dot cloud-dot"></span> Nube</span>
+                        </div>
+                    </div>
+
+                    <div class="stats-grid mt-2">
+                        <div class="stat-item small">
+                            <span class="stat-number" data-target="75">0</span><span class="stat-symbol">%</span>
+                            <p>Monitoreo Infraestructura</p>
+                        </div>
+                        <div class="stat-item small">
+                            <span class="stat-number" data-target="85">0</span><span class="stat-symbol">%</span>
+                            <p>Políticas y Cumplimiento</p>
+                        </div>
+                        <div class="stat-item small">
+                            <span class="stat-number" data-target="95">0</span><span class="stat-symbol">%</span>
+                            <p>Documentación e Inventario</p>
+                        </div>
+                        <div class="stat-item small">
+                            <span class="stat-number" data-target="80">0</span><span class="stat-symbol">%</span>
+                            <p>Alta Disponibilidad</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta: Backups y Continuidad -->
+                <div class="dashboard-card service-card">
+                    <div class="card-header">
+                        <i class="fa-solid fa-shield-halved icon-green"></i>
+                        <h3>Backups y Continuidad</h3>
+                    </div>
+                    <p>Protección real para la información crítica de tu empresa.</p>
+                    <ul class="feature-list">
+                        <li><i class="fa-solid fa-check-circle"></i> <strong>80%</strong> Protección de amenazas (virus,
+                            malware)</li>
+                        <li><i class="fa-solid fa-check-circle"></i> <strong>100%</strong> Recuperación ante problemas
+                            de hardware</li>
+                        <li><i class="fa-solid fa-check-circle"></i> <strong>90%</strong> Versionamiento por eliminación
+                            accidental</li>
+                        <li><i class="fa-solid fa-check-circle"></i> <strong>80%</strong> Cumplimiento con regulaciones
+                            y auditorías</li>
+                        <li><i class="fa-solid fa-check-circle"></i> <strong>90%</strong> Evitar pérdida de info y
+                            ransomware</li>
+                    </ul>
+                </div>
+
+                <!-- Tarjeta: AI Systems -->
+                <div class="dashboard-card service-card">
+                    <div class="card-header">
+                        <i class="fa-solid fa-brain icon-green"></i>
+                        <h3>AI Systems</h3>
+                    </div>
+                    <p>Sistemas de inteligencia que agilizan procesos y reducen tiempos de trabajo y decisión.</p>
+                    <div class="ai-features">
+                        <div class="ai-feature">
+                            <i class="fa-solid fa-chart-line"></i>
+                            <div>
+                                <h4>Ventas</h4>
+                                <p>Integramos datos para optimizar el proceso comercial. Respuestas rápidas y
+                                    personalizadas.</p>
+                            </div>
+                        </div>
+                        <div class="ai-feature">
+                            <i class="fa-solid fa-headset"></i>
+                            <div>
+                                <h4>PQR's</h4>
+                                <p>Gestión eficiente con trazabilidad, resolviendo solicitudes de forma autónoma y
+                                    transparente.</p>
+                            </div>
+                        </div>
+                        <div class="ai-feature">
+                            <i class="fa-solid fa-calendar-check"></i>
+                            <div>
+                                <h4>Administrativo</h4>
+                                <p>Avisos de citas, administración de calendario, correo y autorización de procesos
+                                    internos.</p>
+                            </div>
+                        </div>
+                        <div class="ai-feature">
+                            <i class="fa-solid fa-share-nodes"></i>
+                            <div>
+                                <h4>Publicaciones</h4>
+                                <p>Programa y publica automáticamente en redes sociales, maximizando el alcance sin
+                                    esfuerzo manual.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección: Equipo -->
+        <section id="equipo" class="dashboard-card">
+            <h2><i class="fa-solid fa-award"></i> Tu éxito en manos de un equipo certificado</h2>
+            <p class="section-desc">Contamos con un organigrama de especialistas dedicados a garantizar la calidad y el
+                rendimiento de cada solución implementada.</p>
+            <div class="team-placeholder">
+                <div class="team-member">
+                    <i class="fa-solid fa-user-tie"></i>
+                    <span>Especialistas en Nube</span>
+                </div>
+                <div class="team-member">
+                    <i class="fa-solid fa-user-shield"></i>
+                    <span>Expertos en Ciberseguridad</span>
+                </div>
+                <div class="team-member">
+                    <i class="fa-solid fa-user-gear"></i>
+                    <span>Ingenieros de IA</span>
+                </div>
+                <div class="team-member">
+                    <i class="fa-solid fa-user-headset"></i>
+                    <span>Soporte y Acompañamiento</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección: Diferencia -->
+        <section id="diferencia" class="dashboard-card highlight-card">
+            <h2><i class="fa-solid fa-star"></i> ¿Cómo lo hacemos Diferente?</h2>
+            <div class="difference-grid">
+                <div class="diff-item">
+                    <i class="fa-solid fa-bullseye"></i>
+                    <h3>Resultados, no solo tecnología</h3>
+                    <p>Sabemos que las personas no compran tecnología, compran resultados. Nos enfocamos en que nuestros
+                        servicios sean claros y sin complicaciones.</p>
+                </div>
+                <div class="diff-item">
+                    <i class="fa-solid fa-puzzle-piece"></i>
+                    <h3>Adaptabilidad total</h3>
+                    <p>Creamos soluciones que se adaptan a ti, facilitando su uso desde el primer momento.</p>
+                </div>
+                <div class="diff-item">
+                    <i class="fa-solid fa-handshake"></i>
+                    <h3>Acompañamiento humano</h3>
+                    <p>Te acompañamos siempre, porque la confianza y el servicio humano son nuestra prioridad.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección: Contacto -->
+        <section id="contacto" class="dashboard-card">
+            <h2><i class="fa-solid fa-paper-plane"></i> Contáctenos</h2>
+            <div class="contact-grid">
+                <a href="mailto:ingenieria@tittanium.co" class="contact-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <div>
+                        <strong>Correo electrónico</strong>
+                        <span>ingenieria@tittanium.co</span>
+                    </div>
+                </a>
+                <a href="https://maps.google.com/?q=Calle+6+sur+43A-200+Medellin+Colombia" target="_blank"
+                    class="contact-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <strong>Dirección</strong>
+                        <span>Calle 6 sur #43A-200, Medellín - Colombia</span>
+                    </div>
+                </a>
+                <a href="https://www.tittanium.co" target="_blank" class="contact-item">
+                    <i class="fa-solid fa-globe"></i>
+                    <div>
+                        <strong>Sitio web</strong>
+                        <span>www.tittanium.co</span>
+                    </div>
+                </a>
+                <a href="https://instagram.com/tittanium_sas" target="_blank" class="contact-item">
+                    <i class="fa-brands fa-instagram"></i>
+                    <div>
+                        <strong>Instagram</strong>
+                        <span>@tittanium_sas</span>
+                    </div>
+                </a>
+                <a href="https://linkedin.com/company/tittanium-co" target="_blank" class="contact-item">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <div>
+                        <strong>LinkedIn</strong>
+                        <span>linkedin.com/company/tittanium-co</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>&copy; 2026 Tittanium. Todos los derechos reservados.</p>
+        </footer>
+    </main>
+
+    <!-- ✅ RUTA CORREGIDA: mismo nivel que index.html -->
+    <script src="portafolio.js"></script>
+</body>
+
+</html>
