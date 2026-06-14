@@ -9,56 +9,61 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Chart.js para gráficos interactivos -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="portafolio.css">
 </head>
 <body>
-    <!-- Partículas de fondo animadas -->
-    <div class="particles" aria-hidden="true">
-        <span></span><span></span><span></span><span></span><span></span>
-        <span></span><span></span><span></span><span></span><span></span>
+    <!-- Logo móvil -->
+    <div class="mobile-logo" id="mobileLogo">
+        <img src="logo-tittanium.png" alt="Tittanium">
     </div>
 
-    <!-- Navegación Lateral -->
+    <!-- Sidebar -->
     <nav class="sidebar">
+        <button class="close-menu-btn" id="closeMenuBtn">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        
         <div class="logo">
-            <img src="logo-tittanium.png" alt="Logo Tittanium">
+            <img src="logo-tittanium.png" alt="Tittanium">
         </div>
+        
         <ul class="nav-links">
             <li><a href="#" data-page="inicio" class="active"><i class="fa-solid fa-house"></i> <span>Inicio</span></a></li>
             <li><a href="#" data-page="quienes-somos"><i class="fa-solid fa-users"></i> <span>Quiénes Somos</span></a></li>
             <li><a href="#" data-page="servicios"><i class="fa-solid fa-cloud"></i> <span>Servicios</span></a></li>
             <li><a href="#" data-page="equipo"><i class="fa-solid fa-id-badge"></i> <span>Equipo</span></a></li>
             <li><a href="#" data-page="diferencia"><i class="fa-solid fa-lightbulb"></i> <span>Nuestra Diferencia</span></a></li>
-            <li><a href="#" data-page="certificaciones"><i class="fa-solid fa-certificate"></i> <span>Certificaciones</span></a></li>
             <li><a href="#" data-page="contacto"><i class="fa-solid fa-envelope"></i> <span>Contacto</span></a></li>
         </ul>
+        
         <div class="sidebar-footer">
-            <a href="https://wa.me/573161772997" target="_blank" class="whatsapp-btn">
+            <a href="https://wa.me/573161772997" target="_blank" class="whatsapp-btn-large">
                 <i class="fa-brands fa-whatsapp"></i>
                 <span>WhatsApp</span>
             </a>
-            <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
-                <i class="fa-solid fa-moon"></i>
-            </button>
+            <div class="footer-icons">
+                <a href="https://www.tittanium.co" target="_blank" class="footer-icon" title="Web"><i class="fa-solid fa-globe"></i></a>
+                <a href="https://linkedin.com/company/tittanium-sas" target="_blank" class="footer-icon" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" class="footer-icon" title="Portafolio"><i class="fa-solid fa-briefcase"></i></a>
+                <button class="footer-icon theme-toggle-btn" id="themeToggle" title="Tema"><i class="fa-solid fa-moon"></i></button>
+            </div>
         </div>
     </nav>
 
-    <!-- Botón menú móvil (izquierda) -->
+    <!-- Botón menú móvil -->
     <button class="mobile-menu-btn" id="mobileMenuBtn">
         <i class="fa-solid fa-bars"></i>
     </button>
 
-    <!-- Contenido Principal con navegación por secciones -->
+    <!-- Contenido Principal -->
     <main class="main-content">
-        
-        <!-- PÁGINA: Inicio -->
+        <!-- INICIO -->
         <section id="inicio" class="page active">
-            <div class="dashboard-card hero-section">
+            <div class="hero-banner">
                 <div class="hero-content">
                     <span class="badge">Portafolio 2026</span>
-                    <h1>Tecnología poderosa, <span class="text-green">simple e intuitiva</span>.</h1>
+                    <h1>Tecnología poderosa, <span class="highlight">simple e intuitiva</span>.</h1>
                     <p>Transformamos lo complejo en algo útil para tu vida y tu negocio. Hablamos tu idioma y solucionamos tus problemas de manera directa.</p>
                     <div class="hero-buttons">
                         <a href="#" class="btn-primary" data-page="servicios">Explorar Servicios <i class="fa-solid fa-arrow-right"></i></a>
@@ -66,26 +71,28 @@
                     </div>
                 </div>
                 <div class="hero-visual">
-                    <div class="rocket-container">
+                    <div class="rocket-wrapper">
                         <i class="fa-solid fa-rocket rocket"></i>
                         <div class="rocket-flame"></div>
                     </div>
+                    <div class="particles-hero">
+                        <span></span><span></span><span></span><span></span><span></span>
+                    </div>
                 </div>
             </div>
-
-            <!-- Tarjetas rápidas de acceso -->
-            <div class="quick-access-grid">
-                <a href="#" class="dashboard-card quick-card" data-page="servicios">
+            
+            <div class="quick-cards">
+                <a href="#" class="quick-card" data-page="servicios">
                     <i class="fa-solid fa-cloud"></i>
                     <h3>Servicios en la Nube</h3>
                     <p>Infraestructura optimizada y segura</p>
                 </a>
-                <a href="#" class="dashboard-card quick-card" data-page="servicios">
+                <a href="#" class="quick-card" data-page="servicios">
                     <i class="fa-solid fa-brain"></i>
                     <h3>AI Systems</h3>
                     <p>Inteligencia que agiliza procesos</p>
                 </a>
-                <a href="#" class="dashboard-card quick-card" data-page="contacto">
+                <a href="#" class="quick-card" data-page="contacto">
                     <i class="fa-solid fa-paper-plane"></i>
                     <h3>Contáctanos</h3>
                     <p>Hablemos de tu proyecto</p>
@@ -93,26 +100,20 @@
             </div>
         </section>
 
-        <!-- PÁGINA: Quiénes Somos -->
+        <!-- QUIENES SOMOS -->
         <section id="quienes-somos" class="page">
             <div class="dashboard-card">
                 <h2><i class="fa-solid fa-users-gear"></i> ¡Quiénes Somos!</h2>
-                <p class="section-desc">En Tittanium, creemos que la tecnología no tiene que ser compleja para ser poderosa. Nuestra misión es hacer que lo técnico sea simple, intuitivo y sobre todo, útil. Trabajamos para entender tus necesidades desde lo humano.</p>
+                <p class="section-desc">En Tittanium, creemos que la tecnología no tiene que ser compleja para ser poderosa. Nuestra misión es hacer que lo técnico sea simple, intuitivo y sobre todo, útil para tu vida y tu negocio. Trabajamos para entender tus necesidades desde lo humano, utilizando herramientas que hablan tu idioma y solucionan tus problemas de manera directa.</p>
             </div>
-
             <div class="dashboard-card">
                 <h2><i class="fa-solid fa-bullseye"></i> ¿Qué hacemos?</h2>
-                <p class="section-desc">En Tittanium, transformamos lo complejo en algo simple y útil para tu día a día. Nos especializamos en:</p>
+                <p class="section-desc">En Tittanium, transformamos lo complejo en algo simple y útil para tu día a día.</p>
                 <div class="what-we-do-grid">
                     <div class="wwd-item">
                         <i class="fa-solid fa-cloud"></i>
                         <h3>Servicios en la Nube</h3>
                         <p>Infraestructura optimizada, confiable y segura.</p>
-                    </div>
-                    <div class="wwd-item">
-                        <i class="fa-solid fa-shield-halved"></i>
-                        <h3>Backups y Continuidad</h3>
-                        <p>Protección real para tu información crítica.</p>
                     </div>
                     <div class="wwd-item">
                         <i class="fa-solid fa-brain"></i>
@@ -123,252 +124,162 @@
             </div>
         </section>
 
-        <!-- PÁGINA: Servicios -->
+        <!-- SERVICIOS -->
         <section id="servicios" class="page">
             <div class="page-header">
                 <h2><i class="fa-solid fa-cloud"></i> Nuestros Servicios</h2>
                 <p class="section-desc">Transformamos lo complejo en algo simple y útil para tu día a día.</p>
             </div>
-            
             <div class="services-grid">
-                <!-- Tarjeta: Servicios en la Nube -->
+                <!-- Nube -->
                 <div class="dashboard-card service-card">
                     <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&q=80');">
-                        <div class="service-image-overlay"></div>
+                        <div class="service-overlay"></div>
                     </div>
                     <div class="card-header">
                         <i class="fa-solid fa-cloud icon-green"></i>
                         <h3>Servicios en la Nube</h3>
                     </div>
-                    <p>Mantenemos tu infraestructura optimizada, confiable y segura, sin interrupciones.</p>
-                    
+                    <p>Te ayudamos a mantener tu infraestructura en la nube siempre optimizada, confiable y segura.</p>
                     <div class="stats-grid">
                         <div class="stat-item">
                             <span class="stat-number" data-target="38">0</span><span class="stat-symbol">%</span>
-                            <p>Reducción Costos Mensuales</p>
+                            <p>Reducción Costos</p>
                         </div>
                         <div class="stat-item">
                             <span class="stat-number" data-target="80">0</span><span class="stat-symbol">%</span>
-                            <p>Copias de Seguridad Automáticas</p>
+                            <p>Backups Automáticos</p>
                         </div>
                         <div class="stat-item">
                             <span class="stat-number" data-target="90">0</span><span class="stat-symbol">%</span>
-                            <p>Puntaje de Seguridad</p>
+                            <p>Seguridad</p>
                         </div>
                         <div class="stat-item">
                             <span class="stat-number" data-target="95">0</span><span class="stat-symbol">%</span>
-                            <p>Alertamiento (Costos/Amenazas)</p>
+                            <p>Alertamiento</p>
                         </div>
                     </div>
-
                     <div class="chart-container">
-                        <h4>Costo Infraestructura: On-premise vs Nube (USD)</h4>
+                        <h4>Costo: On-premise vs Nube (USD)</h4>
                         <canvas id="cloudChart"></canvas>
-                    </div>
-
-                    <div class="stats-grid mt-2">
-                        <div class="stat-item small">
-                            <span class="stat-number" data-target="75">0</span><span class="stat-symbol">%</span>
-                            <p>Monitoreo Infraestructura</p>
-                        </div>
-                        <div class="stat-item small">
-                            <span class="stat-number" data-target="85">0</span><span class="stat-symbol">%</span>
-                            <p>Políticas y Cumplimiento</p>
-                        </div>
-                        <div class="stat-item small">
-                            <span class="stat-number" data-target="95">0</span><span class="stat-symbol">%</span>
-                            <p>Documentación e Inventario</p>
-                        </div>
-                        <div class="stat-item small">
-                            <span class="stat-number" data-target="80">0</span><span class="stat-symbol">%</span>
-                            <p>Alta Disponibilidad</p>
-                        </div>
                     </div>
                 </div>
 
-                <!-- Tarjeta: Backups y Continuidad -->
+                <!-- Backups -->
                 <div class="dashboard-card service-card">
                     <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80');">
-                        <div class="service-image-overlay"></div>
+                        <div class="service-overlay"></div>
                     </div>
                     <div class="card-header">
                         <i class="fa-solid fa-shield-halved icon-green"></i>
                         <h3>Backups y Continuidad</h3>
                     </div>
-                    <p>Protección real para la información crítica de tu empresa.</p>
                     <ul class="feature-list">
-                        <li><i class="fa-solid fa-check-circle"></i> <strong>80%</strong> Protección de amenazas (virus, malware)</li>
-                        <li><i class="fa-solid fa-check-circle"></i> <strong>100%</strong> Recuperación ante problemas de hardware</li>
-                        <li><i class="fa-solid fa-check-circle"></i> <strong>90%</strong> Versionamiento por eliminación accidental</li>
-                        <li><i class="fa-solid fa-check-circle"></i> <strong>80%</strong> Cumplimiento con regulaciones y auditorías</li>
-                        <li><i class="fa-solid fa-check-circle"></i> <strong>90%</strong> Evitar pérdida de info y ransomware</li>
+                        <li><i class="fa-solid fa-check-circle"></i> <strong>80%</strong> Protección amenazas</li>
+                        <li><i class="fa-solid fa-check-circle"></i> <strong>100%</strong> Recuperación hardware</li>
+                        <li><i class="fa-solid fa-check-circle"></i> <strong>90%</strong> Versionamiento</li>
+                        <li><i class="fa-solid fa-check-circle"></i> <strong>80%</strong> Cumplimiento</li>
+                        <li><i class="fa-solid fa-check-circle"></i> <strong>90%</strong> Evitar pérdida datos</li>
                     </ul>
                 </div>
 
-                <!-- Tarjeta: AI Systems -->
+                <!-- AI -->
                 <div class="dashboard-card service-card">
                     <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&q=80');">
-                        <div class="service-image-overlay"></div>
+                        <div class="service-overlay"></div>
                     </div>
                     <div class="card-header">
                         <i class="fa-solid fa-brain icon-green"></i>
                         <h3>AI Systems</h3>
                     </div>
-                    <p>Sistemas de inteligencia que agilizan procesos y reducen tiempos de trabajo y decisión.</p>
                     <div class="ai-features">
                         <div class="ai-feature">
                             <i class="fa-solid fa-chart-line"></i>
-                            <div>
-                                <h4>Ventas</h4>
-                                <p>Integramos datos para optimizar el proceso comercial. Respuestas rápidas y personalizadas.</p>
-                            </div>
+                            <div><h4>Ventas</h4><p>Optimización del proceso comercial</p></div>
                         </div>
                         <div class="ai-feature">
                             <i class="fa-solid fa-headset"></i>
-                            <div>
-                                <h4>PQR's</h4>
-                                <p>Gestión eficiente con trazabilidad, resolviendo solicitudes de forma autónoma y transparente.</p>
-                            </div>
+                            <div><h4>PQR's</h4><p>Gestión eficiente con trazabilidad</p></div>
                         </div>
                         <div class="ai-feature">
                             <i class="fa-solid fa-calendar-check"></i>
-                            <div>
-                                <h4>Administrativo</h4>
-                                <p>Avisos de citas, administración de calendario, correo y autorización de procesos internos.</p>
-                            </div>
+                            <div><h4>Administrativo</h4><p>Automatización de procesos</p></div>
                         </div>
                         <div class="ai-feature">
                             <i class="fa-solid fa-share-nodes"></i>
-                            <div>
-                                <h4>Publicaciones</h4>
-                                <p>Programa y publica automáticamente en redes sociales, maximizando el alcance sin esfuerzo manual.</p>
-                            </div>
+                            <div><h4>Publicaciones</h4><p>Redes sociales automáticas</p></div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- PÁGINA: Equipo -->
+        <!-- EQUIPO -->
         <section id="equipo" class="page">
             <div class="dashboard-card">
-                <h2><i class="fa-solid fa-award"></i> Tu éxito en manos de un equipo certificado</h2>
-                <p class="section-desc">Contamos con un organigrama de especialistas dedicados a garantizar la calidad y el rendimiento de cada solución implementada.</p>
-                <div class="team-placeholder">
-                    <div class="team-member">
-                        <i class="fa-solid fa-user-tie"></i>
-                        <span>Especialistas en Nube</span>
-                    </div>
-                    <div class="team-member">
-                        <i class="fa-solid fa-user-shield"></i>
-                        <span>Expertos en Ciberseguridad</span>
-                    </div>
-                    <div class="team-member">
-                        <i class="fa-solid fa-user-gear"></i>
-                        <span>Ingenieros de IA</span>
-                    </div>
-                    <div class="team-member">
-                        <i class="fa-solid fa-user-headset"></i>
-                        <span>Soporte y Acompañamiento</span>
-                    </div>
+                <h2><i class="fa-solid fa-award"></i> Equipo Certificado</h2>
+                <p class="section-desc">Contamos con especialistas dedicados a garantizar la calidad.</p>
+                <div class="team-grid">
+                    <div class="team-member"><i class="fa-solid fa-user-tie"></i><span>Especialistas Nube</span></div>
+                    <div class="team-member"><i class="fa-solid fa-user-shield"></i><span>Ciberseguridad</span></div>
+                    <div class="team-member"><i class="fa-solid fa-user-gear"></i><span>Ingenieros IA</span></div>
+                    <div class="team-member"><i class="fa-solid fa-user-headset"></i><span>Soporte</span></div>
                 </div>
             </div>
         </section>
 
-        <!-- PÁGINA: Diferencia -->
+        <!-- DIFERENCIA -->
         <section id="diferencia" class="page">
             <div class="dashboard-card highlight-card">
                 <h2><i class="fa-solid fa-star"></i> ¿Cómo lo hacemos Diferente?</h2>
                 <div class="difference-grid">
                     <div class="diff-item">
                         <i class="fa-solid fa-bullseye"></i>
-                        <h3>Resultados, no solo tecnología</h3>
-                        <p>Sabemos que las personas no compran tecnología, compran resultados. Nos enfocamos en que nuestros servicios sean claros y sin complicaciones.</p>
+                        <h3>Resultados</h3>
+                        <p>Servicios claros y sin complicaciones</p>
                     </div>
                     <div class="diff-item">
                         <i class="fa-solid fa-puzzle-piece"></i>
-                        <h3>Adaptabilidad total</h3>
-                        <p>Creamos soluciones que se adaptan a ti, facilitando su uso desde el primer momento.</p>
+                        <h3>Adaptabilidad</h3>
+                        <p>Soluciones que se adaptan a ti</p>
                     </div>
                     <div class="diff-item">
                         <i class="fa-solid fa-handshake"></i>
-                        <h3>Acompañamiento humano</h3>
-                        <p>Te acompañamos siempre, porque la confianza y el servicio humano son nuestra prioridad.</p>
+                        <h3>Acompañamiento</h3>
+                        <p>Servicio humano prioritario</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- PÁGINA: Certificaciones -->
-        <section id="certificaciones" class="page">
-            <div class="dashboard-card">
-                <h2><i class="fa-solid fa-certificate"></i> Certificaciones</h2>
-                <p class="section-desc">Contamos con certificaciones que respaldan nuestra experiencia y compromiso con la calidad.</p>
-                <div class="certifications-grid">
-                    <!-- Agrega aquí tus imágenes de certificaciones -->
-                    <div class="cert-item">
-                        <img src="img/certificaciones/cert1.png" alt="Certificación 1" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'cert-placeholder\'><i class=\'fa-solid fa-certificate\'></i><p>Certificación 1</p></div>';">
-                    </div>
-                    <div class="cert-item">
-                        <img src="img/certificaciones/cert2.png" alt="Certificación 2" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'cert-placeholder\'><i class=\'fa-solid fa-certificate\'></i><p>Certificación 2</p></div>';">
-                    </div>
-                    <div class="cert-item">
-                        <img src="img/certificaciones/cert3.png" alt="Certificación 3" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'cert-placeholder\'><i class=\'fa-solid fa-certificate\'></i><p>Certificación 3</p></div>';">
-                    </div>
-                    <div class="cert-item">
-                        <img src="img/certificaciones/cert4.png" alt="Certificación 4" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'cert-placeholder\'><i class=\'fa-solid fa-certificate\'></i><p>Certificación 4</p></div>';">
-                    </div>
-                </div>
-                <p class="cert-note"> Coloca tus imágenes en la carpeta <code>img/certificaciones/</code> con los nombres cert1.png, cert2.png, etc.</p>
-            </div>
-        </section>
-
-        <!-- PÁGINA: Contacto -->
+        <!-- CONTACTO -->
         <section id="contacto" class="page">
             <div class="dashboard-card">
                 <h2><i class="fa-solid fa-paper-plane"></i> Contáctenos</h2>
                 <div class="contact-grid">
                     <a href="mailto:ingenieria@tittanium.co" class="contact-item">
                         <i class="fa-solid fa-envelope"></i>
-                        <div>
-                            <strong>Correo electrónico</strong>
-                            <span>ingenieria@tittanium.co</span>
-                        </div>
+                        <div><strong>Correo</strong><span>ingenieria@tittanium.co</span></div>
                     </a>
                     <a href="https://maps.google.com/?q=Calle+6+sur+43A-200+Medellin+Colombia" target="_blank" class="contact-item">
                         <i class="fa-solid fa-location-dot"></i>
-                        <div>
-                            <strong>Dirección</strong>
-                            <span>Calle 6 sur #43A-200, Medellín - Colombia</span>
-                        </div>
+                        <div><strong>Dirección</strong><span>Calle 6 sur #43A-200, Medellín</span></div>
                     </a>
                     <a href="https://www.tittanium.co" target="_blank" class="contact-item">
                         <i class="fa-solid fa-globe"></i>
-                        <div>
-                            <strong>Sitio web</strong>
-                            <span>www.tittanium.co</span>
-                        </div>
+                        <div><strong>Web</strong><span>www.tittanium.co</span></div>
                     </a>
                     <a href="https://instagram.com/tittanium_sas" target="_blank" class="contact-item">
                         <i class="fa-brands fa-instagram"></i>
-                        <div>
-                            <strong>Instagram</strong>
-                            <span>@tittanium_sas</span>
-                        </div>
+                        <div><strong>Instagram</strong><span>@tittanium_sas</span></div>
                     </a>
-                    <a href="https://www.linkedin.com/company/tittanium-sas" target="_blank" class="contact-item">
+                    <a href="https://linkedin.com/company/tittanium-sas" target="_blank" class="contact-item">
                         <i class="fa-brands fa-linkedin"></i>
-                        <div>
-                            <strong>LinkedIn</strong>
-                            <span>Ver perfil</span>
-                        </div>
+                        <div><strong>LinkedIn</strong><span>Ver perfil</span></div>
                     </a>
-                    <a href="https://wa.me/573161772997" target="_blank" class="contact-item whatsapp-contact">
+                    <a href="https://wa.me/573161772997" target="_blank" class="contact-item whatsapp">
                         <i class="fa-brands fa-whatsapp"></i>
-                        <div>
-                            <strong>WhatsApp</strong>
-                            <span>+57 316 1772997</span>
-                        </div>
+                        <div><strong>WhatsApp</strong><span>+57 316 1772997</span></div>
                     </a>
                 </div>
             </div>
