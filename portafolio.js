@@ -1,11 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Navegación SPA
+    // ==========================================
+    // 1. NAVEGACIÓN SPA
+    // ==========================================
     const pages = document.querySelectorAll('.page');
     const navLinks = document.querySelectorAll('.nav-links a[data-page]');
     const pageButtons = document.querySelectorAll('[data-page]');
 
     function showPage(pageId) {
         pages.forEach(page => page.classList.remove('active'));
+        
         const targetPage = document.getElementById(pageId);
         if (targetPage) {
             targetPage.classList.add('active');
@@ -44,7 +47,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Menú móvil
+    // ==========================================
+    // 2. MENÚ MÓVIL
+    // ==========================================
     const mobileBtn = document.getElementById('mobileMenuBtn');
     const closeMenuBtn = document.getElementById('closeMenuBtn');
     const sidebar = document.querySelector('.sidebar');
@@ -84,7 +89,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Modo oscuro
+    // ==========================================
+    // 3. MODO OSCURO
+    // ==========================================
     const themeToggle = document.getElementById('themeToggle');
     
     function updateThemeIcon(theme) {
@@ -106,7 +113,9 @@ document.addEventListener('DOMContentLoaded', () => {
     
     if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
 
-    // Animación números
+    // ==========================================
+    // 4. ANIMACIÓN DE NÚMEROS
+    // ==========================================
     const animateNumbers = () => {
         const numbers = document.querySelectorAll('.stat-number');
         numbers.forEach(num => {
@@ -127,6 +136,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
+    // ==========================================
+    // 5. OBSERVER
+    // ==========================================
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -142,7 +154,9 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
-    // Gráfico Chart.js
+    // ==========================================
+    // 6. GRÁFICO CHART.JS
+    // ==========================================
     function initChart() {
         const canvas = document.getElementById('cloudChart');
         if (!canvas) return;
@@ -191,4 +205,37 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // ==========================================
+    // 7. TABS DE SERVICIOS
+    // ==========================================
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const tabPanes = document.querySelectorAll('.tab-pane');
+
+    tabButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const tabId = btn.getAttribute('data-tab');
+            
+            tabButtons.forEach(b => b.classList.remove('active'));
+            tabPanes.forEach(p => p.classList.remove('active'));
+            
+            btn.classList.add('active');
+            document.getElementById(`tab-${tabId}`).classList.add('active');
+            
+            if (tabId === 'nube') {
+                setTimeout(initChart, 300);
+            }
+        });
+    });
 });
+
+// ==========================================
+// 8. FORZAR SCROLL AL TOPE
+// ==========================================
+window.addEventListener('load', () => {
+    window.scrollTo(0, 0);
+});
+
+if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+}

@@ -33,6 +33,7 @@
             <li><a href="#" data-page="quienes-somos"><i class="fa-solid fa-users"></i> <span>Quiénes Somos</span></a></li>
             <li><a href="#" data-page="servicios"><i class="fa-solid fa-cloud"></i> <span>Servicios</span></a></li>
             <li><a href="#" data-page="equipo"><i class="fa-solid fa-id-badge"></i> <span>Equipo</span></a></li>
+            <li><a href="#" data-page="certificaciones"><i class="fa-solid fa-award"></i> <span>Nuestras Certificaciones</span></a></li>
             <li><a href="#" data-page="diferencia"><i class="fa-solid fa-lightbulb"></i> <span>Nuestra Diferencia</span></a></li>
             <li><a href="#" data-page="contacto"><i class="fa-solid fa-envelope"></i> <span>Contacto</span></a></li>
         </ul>
@@ -45,7 +46,7 @@
             <div class="footer-icons">
                 <a href="https://www.tittanium.co" target="_blank" class="footer-icon" title="Web"><i class="fa-solid fa-globe"></i></a>
                 <a href="https://linkedin.com/company/tittanium-sas" target="_blank" class="footer-icon" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="#" class="footer-icon" title="Portafolio"><i class="fa-solid fa-briefcase"></i></a>
+                <a href="https://instagram.com/tittanium_sas" target="_blank" class="footer-icon" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
                 <button class="footer-icon theme-toggle-btn" id="themeToggle" title="Tema"><i class="fa-solid fa-moon"></i></button>
             </div>
         </div>
@@ -62,7 +63,6 @@
         <section id="inicio" class="page active">
             <div class="hero-banner">
                 <div class="hero-content">
-                    <span class="badge">Portafolio 2026</span>
                     <h1>Tecnología poderosa, <span class="highlight">simple e intuitiva</span>.</h1>
                     <p>Transformamos lo complejo en algo útil para tu vida y tu negocio. Hablamos tu idioma y solucionamos tus problemas de manera directa.</p>
                     <div class="hero-buttons">
@@ -71,16 +71,70 @@
                     </div>
                 </div>
                 <div class="hero-visual">
-                    <div class="rocket-wrapper">
-                        <i class="fa-solid fa-rocket rocket"></i>
-                        <div class="rocket-flame"></div>
+                    <div class="rocket-circle">
+                        <i class="fa-solid fa-rocket"></i>
                     </div>
-                    <div class="particles-hero">
-                        <span></span><span></span><span></span><span></span><span></span>
+                    <div class="rocket-status">Portafolio 2026</div>
+                </div>
+            </div>
+            
+            <!-- Certificaciones en recuadros blancos -->
+            <div class="certifications-strip">
+                <h3 class="cert-title">
+                    <i class="fa-solid fa-award"></i>
+                    Tu éxito en manos de un equipo certificado
+                </h3>
+                <div class="cert-track">
+                    <div class="cert-card">
+                        <img src="img/certificaciones/azure-virtual-desktop.png" alt="Azure Virtual Desktop Specialty">
+                        <span class="cert-label">Azure Virtual Desktop</span>
+                    </div>
+                    <div class="cert-card">
+                        <img src="img/certificaciones/azure-solutions-architect.png" alt="Azure Solutions Architect Expert">
+                        <span class="cert-label">Solutions Architect</span>
+                    </div>
+                    <div class="cert-card">
+                        <img src="img/certificaciones/azure-network-engineer.png" alt="Azure Network Engineer Associate">
+                        <span class="cert-label">Network Engineer</span>
+                    </div>
+                    <div class="cert-card">
+                        <img src="img/certificaciones/azure-administrator.png" alt="Azure Administrator Associate">
+                        <span class="cert-label">Azure Administrator</span>
+                    </div>
+                    <div class="cert-card">
+                        <img src="img/certificaciones/azure-data-fundamentals.png" alt="Azure Data Fundamentals">
+                        <span class="cert-label">Data Fundamentals</span>
+                    </div>
+                    <div class="cert-card">
+                        <img src="img/certificaciones/security-compliance-identity.png" alt="Security Compliance and Identity Fundamentals">
+                        <span class="cert-label">Security & Identity</span>
+                    </div>
+                    <div class="cert-card">
+                        <img src="img/certificaciones/azure-fundamentals.png" alt="Azure Fundamentals">
+                        <span class="cert-label">Azure Fundamentals</span>
                     </div>
                 </div>
             </div>
             
+            <!-- Services Showcase -->
+            <div class="services-showcase">
+                <a href="#" class="service-card-large" data-page="servicios">
+                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80" alt="Servicios en la Nube">
+                    <div class="service-card-overlay">
+                        <h3>Servicios en la Nube</h3>
+                        <p>Infraestructura optimizada y segura</p>
+                    </div>
+                </a>
+                <a href="#" class="service-card-large" data-page="servicios">
+                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80" alt="AI Systems">
+                    <div class="service-card-overlay">
+                        <h3>AI Systems</h3>
+                        <p>Inteligencia que agiliza procesos</p>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Quick Cards -->
             <div class="quick-cards">
                 <a href="#" class="quick-card" data-page="servicios">
                     <i class="fa-solid fa-cloud"></i>
@@ -116,6 +170,11 @@
                         <p>Infraestructura optimizada, confiable y segura.</p>
                     </div>
                     <div class="wwd-item">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <h3>Backups y Continuidad</h3>
+                        <p>Protección real para información crítica.</p>
+                    </div>
+                    <div class="wwd-item">
                         <i class="fa-solid fa-brain"></i>
                         <h3>AI Systems</h3>
                         <p>Sistemas de inteligencia que agilizan procesos.</p>
@@ -130,84 +189,238 @@
                 <h2><i class="fa-solid fa-cloud"></i> Nuestros Servicios</h2>
                 <p class="section-desc">Transformamos lo complejo en algo simple y útil para tu día a día.</p>
             </div>
-            <div class="services-grid">
-                <!-- Nube -->
-                <div class="dashboard-card service-card">
-                    <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&q=80');">
-                        <div class="service-overlay"></div>
-                    </div>
-                    <div class="card-header">
-                        <i class="fa-solid fa-cloud icon-green"></i>
-                        <h3>Servicios en la Nube</h3>
-                    </div>
-                    <p>Te ayudamos a mantener tu infraestructura en la nube siempre optimizada, confiable y segura.</p>
-                    <div class="stats-grid">
-                        <div class="stat-item">
-                            <span class="stat-number" data-target="38">0</span><span class="stat-symbol">%</span>
-                            <p>Reducción Costos</p>
+            
+            <!-- Tabs de navegación -->
+            <div class="services-tabs">
+                <button class="tab-btn active" data-tab="nube">
+                    <i class="fa-solid fa-cloud"></i>
+                    <span>Servicios en la Nube</span>
+                </button>
+                <button class="tab-btn" data-tab="backups">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span>Backups y Continuidad</span>
+                </button>
+                <button class="tab-btn" data-tab="ai">
+                    <i class="fa-solid fa-brain"></i>
+                    <span>AI Systems</span>
+                </button>
+            </div>
+            
+            <!-- Contenido de tabs -->
+            <div class="tab-content">
+                <!-- Tab: Servicios en la Nube -->
+                <div class="tab-pane active" id="tab-nube">
+                    <div class="dashboard-card service-card">
+                        <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&q=80');">
+                            <div class="service-overlay"></div>
                         </div>
-                        <div class="stat-item">
-                            <span class="stat-number" data-target="80">0</span><span class="stat-symbol">%</span>
-                            <p>Backups Automáticos</p>
+                        <div class="card-header">
+                            <i class="fa-solid fa-cloud icon-green"></i>
+                            <h3>Servicios en la Nube</h3>
                         </div>
-                        <div class="stat-item">
-                            <span class="stat-number" data-target="90">0</span><span class="stat-symbol">%</span>
-                            <p>Seguridad</p>
+                        <p>Te ayudamos a mantener tu infraestructura en la nube siempre optimizada, confiable y segura. Nos encargamos de que la tecnología funcione sin interrupciones, para que tú puedas enfocarte en lo que realmente importa: hacer crecer tu negocio.</p>
+                        
+                        <!-- Stats Overview - Solo en servicios -->
+                        <div class="stats-overview">
+                            <div class="stat-card-mini">
+                                <div class="stat-icon-mini">
+                                    <i class="fa-solid fa-cloud"></i>
+                                </div>
+                                <div class="stat-info-mini">
+                                    <h3>Reducción Costos</h3>
+                                    <div class="stat-value">38% Anual</div>
+                                </div>
+                            </div>
+                            <div class="stat-card-mini">
+                                <div class="stat-icon-mini">
+                                    <i class="fa-solid fa-shield-halved"></i>
+                                </div>
+                                <div class="stat-info-mini">
+                                    <h3>Backups Status</h3>
+                                    <div class="stat-value">100% Protegido</div>
+                                </div>
+                            </div>
+                            <div class="stat-card-mini">
+                                <div class="stat-icon-mini">
+                                    <i class="fa-solid fa-lock"></i>
+                                </div>
+                                <div class="stat-info-mini">
+                                    <h3>Seguridad</h3>
+                                    <div class="stat-value">90% Puntaje</div>
+                                </div>
+                            </div>
+                            <div class="stat-card-mini">
+                                <div class="stat-icon-mini">
+                                    <i class="fa-solid fa-brain"></i>
+                                </div>
+                                <div class="stat-info-mini">
+                                    <h3>IA Operativa</h3>
+                                    <div class="stat-value">24/7 Monitoreo</div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="stat-item">
-                            <span class="stat-number" data-target="95">0</span><span class="stat-symbol">%</span>
-                            <p>Alertamiento</p>
+                        
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <span class="stat-number" data-target="38">0</span><span class="stat-symbol">%</span>
+                                <p>Reducción Costos</p>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" data-target="80">0</span><span class="stat-symbol">%</span>
+                                <p>Backups Automáticos</p>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" data-target="90">0</span><span class="stat-symbol">%</span>
+                                <p>Seguridad</p>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" data-target="95">0</span><span class="stat-symbol">%</span>
+                                <p>Alertamiento</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="chart-container">
-                        <h4>Costo: On-premise vs Nube (USD)</h4>
-                        <canvas id="cloudChart"></canvas>
+                        
+                        <div class="chart-container">
+                            <h4>Costo: On-premise vs Nube (USD)</h4>
+                            <canvas id="cloudChart"></canvas>
+                        </div>
+                        
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <span class="stat-number" data-target="75">0</span><span class="stat-symbol">%</span>
+                                <p>Monitoreo</p>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" data-target="85">0</span><span class="stat-symbol">%</span>
+                                <p>Políticas</p>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" data-target="95">0</span><span class="stat-symbol">%</span>
+                                <p>Documentación</p>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" data-target="80">0</span><span class="stat-symbol">%</span>
+                                <p>Alta disponibilidad</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-                <!-- Backups -->
-                <div class="dashboard-card service-card">
-                    <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80');">
-                        <div class="service-overlay"></div>
+                
+                <!-- Tab: Backups -->
+                <div class="tab-pane" id="tab-backups">
+                    <div class="dashboard-card service-card">
+                        <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80');">
+                            <div class="service-overlay"></div>
+                        </div>
+                        <div class="card-header">
+                            <i class="fa-solid fa-shield-halved icon-green"></i>
+                            <h3>Backups y Continuidad</h3>
+                        </div>
+                        <p>Protección real para la información crítica de tu empresa. Algunas ventajas incluyen:</p>
+                        
+                        <div class="backups-advantages">
+                            <div class="advantage-card">
+                                <div class="advantage-icon">
+                                    <i class="fa-solid fa-virus-slash"></i>
+                                </div>
+                                <div class="advantage-content">
+                                    <span class="advantage-percent">80%</span>
+                                    <h4>Protección amenazas</h4>
+                                    <p>Virus, malware y ransomware</p>
+                                </div>
+                            </div>
+                            <div class="advantage-card">
+                                <div class="advantage-icon">
+                                    <i class="fa-solid fa-server"></i>
+                                </div>
+                                <div class="advantage-content">
+                                    <span class="advantage-percent">100%</span>
+                                    <h4>Recuperación hardware</h4>
+                                    <p>Ante problemas físicos</p>
+                                </div>
+                            </div>
+                            <div class="advantage-card">
+                                <div class="advantage-icon">
+                                    <i class="fa-solid fa-clock-rotate-left"></i>
+                                </div>
+                                <div class="advantage-content">
+                                    <span class="advantage-percent">90%</span>
+                                    <h4>Versionamiento</h4>
+                                    <p>Por eliminación accidental</p>
+                                </div>
+                            </div>
+                            <div class="advantage-card">
+                                <div class="advantage-icon">
+                                    <i class="fa-solid fa-file-shield"></i>
+                                </div>
+                                <div class="advantage-content">
+                                    <span class="advantage-percent">80%</span>
+                                    <h4>Cumplimiento</h4>
+                                    <p>Regulaciones y auditorías</p>
+                                </div>
+                            </div>
+                            <div class="advantage-card full-width">
+                                <div class="advantage-icon">
+                                    <i class="fa-solid fa-database"></i>
+                                </div>
+                                <div class="advantage-content">
+                                    <span class="advantage-percent">90%</span>
+                                    <h4>Evitar pérdida de información</h4>
+                                    <p>Protección contra amenazas y desastres</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-header">
-                        <i class="fa-solid fa-shield-halved icon-green"></i>
-                        <h3>Backups y Continuidad</h3>
-                    </div>
-                    <ul class="feature-list">
-                        <li><i class="fa-solid fa-check-circle"></i> <strong>80%</strong> Protección amenazas</li>
-                        <li><i class="fa-solid fa-check-circle"></i> <strong>100%</strong> Recuperación hardware</li>
-                        <li><i class="fa-solid fa-check-circle"></i> <strong>90%</strong> Versionamiento</li>
-                        <li><i class="fa-solid fa-check-circle"></i> <strong>80%</strong> Cumplimiento</li>
-                        <li><i class="fa-solid fa-check-circle"></i> <strong>90%</strong> Evitar pérdida datos</li>
-                    </ul>
                 </div>
-
-                <!-- AI -->
-                <div class="dashboard-card service-card">
-                    <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&q=80');">
-                        <div class="service-overlay"></div>
-                    </div>
-                    <div class="card-header">
-                        <i class="fa-solid fa-brain icon-green"></i>
-                        <h3>AI Systems</h3>
-                    </div>
-                    <div class="ai-features">
-                        <div class="ai-feature">
-                            <i class="fa-solid fa-chart-line"></i>
-                            <div><h4>Ventas</h4><p>Optimización del proceso comercial</p></div>
+                
+                <!-- Tab: AI Systems -->
+                <div class="tab-pane" id="tab-ai">
+                    <div class="dashboard-card service-card">
+                        <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&q=80');">
+                            <div class="service-overlay"></div>
                         </div>
-                        <div class="ai-feature">
-                            <i class="fa-solid fa-headset"></i>
-                            <div><h4>PQR's</h4><p>Gestión eficiente con trazabilidad</p></div>
+                        <div class="card-header">
+                            <i class="fa-solid fa-brain icon-green"></i>
+                            <h3>AI Systems</h3>
                         </div>
-                        <div class="ai-feature">
-                            <i class="fa-solid fa-calendar-check"></i>
-                            <div><h4>Administrativo</h4><p>Automatización de procesos</p></div>
-                        </div>
-                        <div class="ai-feature">
-                            <i class="fa-solid fa-share-nodes"></i>
-                            <div><h4>Publicaciones</h4><p>Redes sociales automáticas</p></div>
+                        <p>Sistemas de inteligencia que agilizan procesos y reducen tiempos de trabajo y decisión.</p>
+                        
+                        <div class="ai-solutions">
+                            <div class="solution-card">
+                                <div class="solution-icon">
+                                    <i class="fa-solid fa-chart-line"></i>
+                                </div>
+                                <div class="solution-content">
+                                    <h4>Ventas</h4>
+                                    <p>Integramos datos relevantes para optimizar y acelerar el proceso comercial. Respuestas rápidas y personalizadas.</p>
+                                </div>
+                            </div>
+                            <div class="solution-card">
+                                <div class="solution-icon">
+                                    <i class="fa-solid fa-headset"></i>
+                                </div>
+                                <div class="solution-content">
+                                    <h4>PQR's</h4>
+                                    <p>Gestión eficiente con trazabilidad, resolviendo solicitudes de forma autónoma y transparente.</p>
+                                </div>
+                            </div>
+                            <div class="solution-card">
+                                <div class="solution-icon">
+                                    <i class="fa-solid fa-calendar-check"></i>
+                                </div>
+                                <div class="solution-content">
+                                    <h4>Administrativo</h4>
+                                    <p>Avisos de citas, administración de calendario, correo y autorización de procesos internos.</p>
+                                </div>
+                            </div>
+                            <div class="solution-card">
+                                <div class="solution-icon">
+                                    <i class="fa-solid fa-share-nodes"></i>
+                                </div>
+                                <div class="solution-content">
+                                    <h4>Publicaciones</h4>
+                                    <p>Programa y publica automáticamente en redes sociales, maximizando el alcance sin esfuerzo manual.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -218,12 +431,58 @@
         <section id="equipo" class="page">
             <div class="dashboard-card">
                 <h2><i class="fa-solid fa-award"></i> Equipo Certificado</h2>
-                <p class="section-desc">Contamos con especialistas dedicados a garantizar la calidad.</p>
+                <p class="section-desc">Contamos con un organigrama de especialistas dedicados a garantizar la calidad y el rendimiento de cada solución implementada.</p>
                 <div class="team-grid">
                     <div class="team-member"><i class="fa-solid fa-user-tie"></i><span>Especialistas Nube</span></div>
                     <div class="team-member"><i class="fa-solid fa-user-shield"></i><span>Ciberseguridad</span></div>
                     <div class="team-member"><i class="fa-solid fa-user-gear"></i><span>Ingenieros IA</span></div>
                     <div class="team-member"><i class="fa-solid fa-user-headset"></i><span>Soporte</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CERTIFICACIONES -->
+        <section id="certificaciones" class="page">
+            <div class="dashboard-card">
+                <h2><i class="fa-solid fa-award"></i> Nuestras Certificaciones</h2>
+                <p class="section-desc">Contamos con certificaciones Microsoft Azure que respaldan nuestra experiencia y compromiso con la excelencia técnica.</p>
+                
+                <div class="cert-grid-large">
+                    <div class="cert-card-large">
+                        <img src="img/certificaciones/azure-virtual-desktop.png" alt="Azure Virtual Desktop Specialty">
+                        <span class="cert-label-large">Azure Virtual Desktop</span>
+                        <span class="cert-level specialty">Specialty</span>
+                    </div>
+                    <div class="cert-card-large">
+                        <img src="img/certificaciones/azure-solutions-architect.png" alt="Azure Solutions Architect Expert">
+                        <span class="cert-label-large">Solutions Architect</span>
+                        <span class="cert-level expert">Expert</span>
+                    </div>
+                    <div class="cert-card-large">
+                        <img src="img/certificaciones/azure-network-engineer.png" alt="Azure Network Engineer Associate">
+                        <span class="cert-label-large">Network Engineer</span>
+                        <span class="cert-level associate">Associate</span>
+                    </div>
+                    <div class="cert-card-large">
+                        <img src="img/certificaciones/azure-administrator.png" alt="Azure Administrator Associate">
+                        <span class="cert-label-large">Azure Administrator</span>
+                        <span class="cert-level associate">Associate</span>
+                    </div>
+                    <div class="cert-card-large">
+                        <img src="img/certificaciones/azure-data-fundamentals.png" alt="Azure Data Fundamentals">
+                        <span class="cert-label-large">Data Fundamentals</span>
+                        <span class="cert-level fundamentals">Fundamentals</span>
+                    </div>
+                    <div class="cert-card-large">
+                        <img src="img/certificaciones/security-compliance-identity.png" alt="Security Compliance and Identity Fundamentals">
+                        <span class="cert-label-large">Security & Identity</span>
+                        <span class="cert-level fundamentals">Fundamentals</span>
+                    </div>
+                    <div class="cert-card-large">
+                        <img src="img/certificaciones/azure-fundamentals.png" alt="Azure Fundamentals">
+                        <span class="cert-label-large">Azure Fundamentals</span>
+                        <span class="cert-level fundamentals">Fundamentals</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -235,18 +494,18 @@
                 <div class="difference-grid">
                     <div class="diff-item">
                         <i class="fa-solid fa-bullseye"></i>
-                        <h3>Resultados</h3>
-                        <p>Servicios claros y sin complicaciones</p>
+                        <h3>Resultados, no solo tecnología</h3>
+                        <p>Sabemos que las personas no compran tecnología, compran resultados. Nos enfocamos en que nuestros servicios sean claros y sin complicaciones.</p>
                     </div>
                     <div class="diff-item">
                         <i class="fa-solid fa-puzzle-piece"></i>
-                        <h3>Adaptabilidad</h3>
-                        <p>Soluciones que se adaptan a ti</p>
+                        <h3>Adaptabilidad total</h3>
+                        <p>Creamos soluciones que se adaptan a ti, facilitando su uso desde el primer momento.</p>
                     </div>
                     <div class="diff-item">
                         <i class="fa-solid fa-handshake"></i>
-                        <h3>Acompañamiento</h3>
-                        <p>Servicio humano prioritario</p>
+                        <h3>Acompañamiento humano</h3>
+                        <p>Te acompañamos siempre, porque la confianza y el servicio humano son nuestra prioridad.</p>
                     </div>
                 </div>
             </div>
