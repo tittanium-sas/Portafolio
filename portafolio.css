@@ -612,7 +612,7 @@ body {
 /* Quick Cards */
 .quick-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
     margin-top: 2rem;
 }
@@ -631,6 +631,7 @@ body {
 .quick-card:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-hover);
+    border-color: var(--primary);
 }
 
 .quick-card i {
@@ -714,36 +715,35 @@ body {
     color: var(--text-secondary);
 }
 
-/* Services Tabs */
+/* Services Tabs - 2 filas de 3 */
 .services-tabs {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
-    margin-bottom: 2rem;
-    flex-wrap: wrap;
+    margin-top: 2rem;
     background: var(--bg-white);
-    padding: 0.5rem;
+    padding: 1rem;
     border-radius: var(--radius);
     box-shadow: var(--shadow);
     border: 1px solid var(--border);
 }
 
 .tab-btn {
-    flex: 1;
-    min-width: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.75rem;
-    padding: 1rem 1.5rem;
+    padding: 1rem 1rem;
     background: var(--bg-main);
     border: 2px solid transparent;
     border-radius: 12px;
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-weight: 600;
     color: var(--text-secondary);
     cursor: pointer;
     transition: all 0.3s;
     font-family: 'Inter', sans-serif;
+    min-width: auto;
 }
 
 .tab-btn i {
@@ -861,10 +861,10 @@ body {
     height: 300px;
 }
 
-/* Backups Advantages */
+/* Backups Advantages - 2 filas de 3 */
 .backups-advantages {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
     padding: 2rem;
 }
@@ -885,7 +885,7 @@ body {
 }
 
 .advantage-card.full-width {
-    grid-column: 1 / -1;
+    grid-column: span 1;
 }
 
 .advantage-icon {
@@ -922,6 +922,55 @@ body {
 .advantage-content p {
     font-size: 0.875rem;
     color: var(--text-secondary);
+}
+
+/* ERP Odoo Features - Grid de 2 filas de 3 */
+.odoo-features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.odoo-feature-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: var(--bg-main);
+    border-radius: 12px;
+    border-left: 4px solid var(--primary);
+    transition: all 0.3s;
+}
+
+.odoo-feature-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+}
+
+.odoo-feature-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+}
+
+.odoo-feature-content h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.odoo-feature-content p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
 }
 
 /* AI Solutions */
@@ -967,6 +1016,86 @@ body {
 }
 
 .solution-content p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* App Services */
+.app-services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.service-box {
+    text-align: center;
+    padding: 2rem 1.5rem;
+    background: var(--bg-main);
+    border-radius: 12px;
+    transition: all 0.3s;
+}
+
+.service-box:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.service-box i {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.service-box h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.service-box p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+/* Data Services */
+.data-services {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.data-item {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background: var(--bg-main);
+    border-radius: 12px;
+    border-left: 4px solid var(--primary);
+    transition: all 0.3s;
+}
+
+.data-item:hover {
+    transform: translateX(5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.data-item i {
+    font-size: 2rem;
+    color: var(--primary);
+    flex-shrink: 0;
+}
+
+.data-item h4 {
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.data-item p {
     font-size: 0.9rem;
     color: var(--text-secondary);
     line-height: 1.6;
@@ -1230,17 +1359,19 @@ body {
     }
     
     .services-tabs {
-        flex-direction: column;
-    }
-    
-    .tab-btn {
-        min-width: 100%;
+        grid-template-columns: repeat(2, 1fr);
     }
     
     .backups-advantages,
-    .ai-solutions {
+    .ai-solutions,
+    .app-services,
+    .data-services {
         grid-template-columns: 1fr;
         padding: 1rem;
+    }
+    
+    .odoo-features-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
     
     .advantage-card.full-width {
@@ -1252,6 +1383,10 @@ body {
     }
     
     .cert-grid-large {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .quick-cards {
         grid-template-columns: repeat(2, 1fr);
     }
 }
@@ -1306,6 +1441,14 @@ body {
     }
     
     .cert-grid-large {
+        grid-template-columns: 1fr;
+    }
+    
+    .services-tabs {
+        grid-template-columns: 1fr;
+    }
+    
+    .odoo-features-grid {
         grid-template-columns: 1fr;
     }
 }

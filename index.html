@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio Tittanium 2026</title>
     <meta name="description" content="Portafolio interactivo de Tittanium - Tecnología simple, intuitiva y útil.">
+    <link rel="icon" type="image/png" href="img/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -32,9 +33,7 @@
             <li><a href="#" data-page="inicio" class="active"><i class="fa-solid fa-house"></i> <span>Inicio</span></a></li>
             <li><a href="#" data-page="quienes-somos"><i class="fa-solid fa-users"></i> <span>Quiénes Somos</span></a></li>
             <li><a href="#" data-page="servicios"><i class="fa-solid fa-cloud"></i> <span>Servicios</span></a></li>
-            <li><a href="#" data-page="equipo"><i class="fa-solid fa-id-badge"></i> <span>Equipo</span></a></li>
             <li><a href="#" data-page="certificaciones"><i class="fa-solid fa-award"></i> <span>Nuestras Certificaciones</span></a></li>
-            <li><a href="#" data-page="diferencia"><i class="fa-solid fa-lightbulb"></i> <span>Nuestra Diferencia</span></a></li>
             <li><a href="#" data-page="contacto"><i class="fa-solid fa-envelope"></i> <span>Contacto</span></a></li>
         </ul>
         
@@ -45,7 +44,7 @@
             </a>
             <div class="footer-icons">
                 <a href="https://www.tittanium.co" target="_blank" class="footer-icon" title="Web"><i class="fa-solid fa-globe"></i></a>
-                <a href="https://www.linkedin.com/company/tittanium-co/" target="_blank" class="footer-icon" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://linkedin.com/company/tittanium-sas" target="_blank" class="footer-icon" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
                 <a href="https://instagram.com/tittanium_sas" target="_blank" class="footer-icon" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
                 <button class="footer-icon theme-toggle-btn" id="themeToggle" title="Tema"><i class="fa-solid fa-moon"></i></button>
             </div>
@@ -116,40 +115,37 @@
                 </div>
             </div>
             
-            <!-- Services Showcase -->
-            <div class="services-showcase">
-                <a href="#" class="service-card-large" data-page="servicios">
-                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80" alt="Servicios en la Nube">
-                    <div class="service-card-overlay">
-                        <h3>Servicios en la Nube</h3>
-                        <p>Infraestructura optimizada y segura</p>
-                    </div>
-                </a>
-                <a href="#" class="service-card-large" data-page="servicios">
-                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80" alt="AI Systems">
-                    <div class="service-card-overlay">
-                        <h3>AI Systems</h3>
-                        <p>Inteligencia que agiliza procesos</p>
-                    </div>
-                </a>
-            </div>
-            
-            <!-- Quick Cards -->
+            <!-- Quick Cards - 6 servicios en 2 filas -->
             <div class="quick-cards">
-                <a href="#" class="quick-card" data-page="servicios">
+                <a href="#" class="quick-card" data-page="servicios" data-tab="nube">
                     <i class="fa-solid fa-cloud"></i>
                     <h3>Servicios en la Nube</h3>
                     <p>Infraestructura optimizada y segura</p>
                 </a>
-                <a href="#" class="quick-card" data-page="servicios">
+                <a href="#" class="quick-card" data-page="servicios" data-tab="backups">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <h3>Backups y Continuidad</h3>
+                    <p>Protección real para tu información</p>
+                </a>
+                <a href="#" class="quick-card" data-page="servicios" data-tab="ai">
                     <i class="fa-solid fa-brain"></i>
                     <h3>AI Systems</h3>
                     <p>Inteligencia que agiliza procesos</p>
                 </a>
-                <a href="#" class="quick-card" data-page="contacto">
-                    <i class="fa-solid fa-paper-plane"></i>
-                    <h3>Contáctanos</h3>
-                    <p>Hablemos de tu proyecto</p>
+                <a href="#" class="quick-card" data-page="servicios" data-tab="odoo">
+                    <i class="fa-solid fa-database"></i>
+                    <h3>ERP Odoo</h3>
+                    <p>Gestión integral de tu empresa</p>
+                </a>
+                <a href="#" class="quick-card" data-page="servicios" data-tab="apps">
+                    <i class="fa-solid fa-mobile-screen"></i>
+                    <h3>Apps a la Medida</h3>
+                    <p>Desarrollo personalizado</p>
+                </a>
+                <a href="#" class="quick-card" data-page="servicios" data-tab="datos">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <h3>Análisis de Datos</h3>
+                    <p>Business Intelligence</p>
                 </a>
             </div>
         </section>
@@ -160,24 +156,35 @@
                 <h2><i class="fa-solid fa-users-gear"></i> ¡Quiénes Somos!</h2>
                 <p class="section-desc">En Tittanium, creemos que la tecnología no tiene que ser compleja para ser poderosa. Nuestra misión es hacer que lo técnico sea simple, intuitivo y sobre todo, útil para tu vida y tu negocio. Trabajamos para entender tus necesidades desde lo humano, utilizando herramientas que hablan tu idioma y solucionan tus problemas de manera directa.</p>
             </div>
+            
             <div class="dashboard-card">
-                <h2><i class="fa-solid fa-bullseye"></i> ¿Qué hacemos?</h2>
-                <p class="section-desc">En Tittanium, transformamos lo complejo en algo simple y útil para tu día a día.</p>
-                <div class="what-we-do-grid">
-                    <div class="wwd-item">
-                        <i class="fa-solid fa-cloud"></i>
-                        <h3>Servicios en la Nube</h3>
-                        <p>Infraestructura optimizada, confiable y segura.</p>
+                <h2><i class="fa-solid fa-award"></i> Nuestro Equipo</h2>
+                <p class="section-desc">Contamos con un organigrama de especialistas dedicados a garantizar la calidad y el rendimiento de cada solución implementada.</p>
+                <div class="team-grid">
+                    <div class="team-member"><i class="fa-solid fa-user-tie"></i><span>Especialistas Nube</span></div>
+                    <div class="team-member"><i class="fa-solid fa-user-shield"></i><span>Ciberseguridad</span></div>
+                    <div class="team-member"><i class="fa-solid fa-user-gear"></i><span>Ingenieros IA</span></div>
+                    <div class="team-member"><i class="fa-solid fa-headset"></i><span>Soporte</span></div>
+                </div>
+            </div>
+            
+            <div class="dashboard-card highlight-card">
+                <h2><i class="fa-solid fa-star"></i> ¿Cómo lo hacemos Diferente?</h2>
+                <div class="difference-grid">
+                    <div class="diff-item">
+                        <i class="fa-solid fa-bullseye"></i>
+                        <h3>Resultados, no solo tecnología</h3>
+                        <p>Sabemos que las personas no compran tecnología, compran resultados. Nos enfocamos en que nuestros servicios sean claros y sin complicaciones.</p>
                     </div>
-                    <div class="wwd-item">
-                        <i class="fa-solid fa-shield-halved"></i>
-                        <h3>Backups y Continuidad</h3>
-                        <p>Protección real para información crítica.</p>
+                    <div class="diff-item">
+                        <i class="fa-solid fa-puzzle-piece"></i>
+                        <h3>Adaptabilidad total</h3>
+                        <p>Creamos soluciones que se adaptan a ti, facilitando su uso desde el primer momento.</p>
                     </div>
-                    <div class="wwd-item">
-                        <i class="fa-solid fa-brain"></i>
-                        <h3>AI Systems</h3>
-                        <p>Sistemas de inteligencia que agilizan procesos.</p>
+                    <div class="diff-item">
+                        <i class="fa-solid fa-handshake"></i>
+                        <h3>Acompañamiento humano</h3>
+                        <p>Te acompañamos siempre, porque la confianza y el servicio humano son nuestra prioridad.</p>
                     </div>
                 </div>
             </div>
@@ -204,6 +211,18 @@
                     <i class="fa-solid fa-brain"></i>
                     <span>AI Systems</span>
                 </button>
+                <button class="tab-btn" data-tab="odoo">
+                    <i class="fa-solid fa-database"></i>
+                    <span>ERP Odoo</span>
+                </button>
+                <button class="tab-btn" data-tab="apps">
+                    <i class="fa-solid fa-mobile-screen"></i>
+                    <span>Apps a la Medida</span>
+                </button>
+                <button class="tab-btn" data-tab="datos">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>Análisis de Datos</span>
+                </button>
             </div>
             
             <!-- Contenido de tabs -->
@@ -219,46 +238,6 @@
                             <h3>Servicios en la Nube</h3>
                         </div>
                         <p>Te ayudamos a mantener tu infraestructura en la nube siempre optimizada, confiable y segura. Nos encargamos de que la tecnología funcione sin interrupciones, para que tú puedas enfocarte en lo que realmente importa: hacer crecer tu negocio.</p>
-                        
-                        <!-- Stats Overview - Solo en servicios -->
-                        <div class="stats-overview">
-                            <div class="stat-card-mini">
-                                <div class="stat-icon-mini">
-                                    <i class="fa-solid fa-cloud"></i>
-                                </div>
-                                <div class="stat-info-mini">
-                                    <h3>Reducción Costos</h3>
-                                    <div class="stat-value">38% Anual</div>
-                                </div>
-                            </div>
-                            <div class="stat-card-mini">
-                                <div class="stat-icon-mini">
-                                    <i class="fa-solid fa-shield-halved"></i>
-                                </div>
-                                <div class="stat-info-mini">
-                                    <h3>Backups Status</h3>
-                                    <div class="stat-value">100% Protegido</div>
-                                </div>
-                            </div>
-                            <div class="stat-card-mini">
-                                <div class="stat-icon-mini">
-                                    <i class="fa-solid fa-lock"></i>
-                                </div>
-                                <div class="stat-info-mini">
-                                    <h3>Seguridad</h3>
-                                    <div class="stat-value">90% Puntaje</div>
-                                </div>
-                            </div>
-                            <div class="stat-card-mini">
-                                <div class="stat-icon-mini">
-                                    <i class="fa-solid fa-brain"></i>
-                                </div>
-                                <div class="stat-info-mini">
-                                    <h3>IA Operativa</h3>
-                                    <div class="stat-value">24/7 Monitoreo</div>
-                                </div>
-                            </div>
-                        </div>
                         
                         <div class="stats-grid">
                             <div class="stat-item">
@@ -358,6 +337,16 @@
                                     <p>Regulaciones y auditorías</p>
                                 </div>
                             </div>
+                            <div class="advantage-card">
+                                <div class="advantage-icon">
+                                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                                </div>
+                                <div class="advantage-content">
+                                    <span class="advantage-percent">95%</span>
+                                    <h4>Disponibilidad</h4>
+                                    <p>Acceso remoto y continuidad</p>
+                                </div>
+                            </div>
                             <div class="advantage-card full-width">
                                 <div class="advantage-icon">
                                     <i class="fa-solid fa-database"></i>
@@ -424,19 +413,158 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- EQUIPO -->
-        <section id="equipo" class="page">
-            <div class="dashboard-card">
-                <h2><i class="fa-solid fa-award"></i> Equipo Certificado</h2>
-                <p class="section-desc">Contamos con un organigrama de especialistas dedicados a garantizar la calidad y el rendimiento de cada solución implementada.</p>
-                <div class="team-grid">
-                    <div class="team-member"><i class="fa-solid fa-user-tie"></i><span>Especialistas Nube</span></div>
-                    <div class="team-member"><i class="fa-solid fa-user-shield"></i><span>Ciberseguridad</span></div>
-                    <div class="team-member"><i class="fa-solid fa-user-gear"></i><span>Ingenieros IA</span></div>
-                    <div class="team-member"><i class="fa-solid fa-user-headset"></i><span>Soporte</span></div>
+                
+                <!-- Tab: ERP Odoo -->
+                <div class="tab-pane" id="tab-odoo">
+                    <div class="dashboard-card service-card">
+                        <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80');">
+                            <div class="service-overlay"></div>
+                        </div>
+                        <div class="card-header">
+                            <i class="fa-solid fa-database icon-green"></i>
+                            <h3>ERP Odoo</h3>
+                        </div>
+                        <p>Implementación y personalización de Odoo, el ERP de código abierto más completo del mercado. Centraliza toda la gestión de tu empresa en una sola plataforma integrada y fácil de usar.</p>
+                        
+                        <div class="odoo-features-grid">
+                            <div class="odoo-feature-card">
+                                <div class="odoo-feature-icon">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <div class="odoo-feature-content">
+                                    <h4>Gestión Integral</h4>
+                                    <p>Ventas, compras, inventario, contabilidad y más</p>
+                                </div>
+                            </div>
+                            <div class="odoo-feature-card">
+                                <div class="odoo-feature-icon">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <div class="odoo-feature-content">
+                                    <h4>Personalización</h4>
+                                    <p>Adaptamos Odoo a las necesidades específicas de tu negocio</p>
+                                </div>
+                            </div>
+                            <div class="odoo-feature-card">
+                                <div class="odoo-feature-icon">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <div class="odoo-feature-content">
+                                    <h4>Migración de Datos</h4>
+                                    <p>Transferencia segura de tu información actual</p>
+                                </div>
+                            </div>
+                            <div class="odoo-feature-card">
+                                <div class="odoo-feature-icon">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <div class="odoo-feature-content">
+                                    <h4>Capacitación</h4>
+                                    <p>Formación completa para tu equipo</p>
+                                </div>
+                            </div>
+                            <div class="odoo-feature-card">
+                                <div class="odoo-feature-icon">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <div class="odoo-feature-content">
+                                    <h4>Integraciones</h4>
+                                    <p>Conexión con sistemas y aplicaciones existentes</p>
+                                </div>
+                            </div>
+                            <div class="odoo-feature-card">
+                                <div class="odoo-feature-icon">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <div class="odoo-feature-content">
+                                    <h4>Soporte Continuo</h4>
+                                    <p>Acompañamiento post-implementación</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tab: Apps a la Medida -->
+                <div class="tab-pane" id="tab-apps">
+                    <div class="dashboard-card service-card">
+                        <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&q=80');">
+                            <div class="service-overlay"></div>
+                        </div>
+                        <div class="card-header">
+                            <i class="fa-solid fa-mobile-screen icon-green"></i>
+                            <h3>Desarrollo de Apps a la Medida</h3>
+                        </div>
+                        <p>Creamos aplicaciones móviles y web personalizadas que se adaptan perfectamente a los procesos únicos de tu negocio. Desde la idea hasta el lanzamiento, te acompañamos en cada etapa.</p>
+                        
+                        <div class="app-services">
+                            <div class="service-box">
+                                <i class="fa-solid fa-mobile-screen-button"></i>
+                                <h4>Apps Móviles</h4>
+                                <p>iOS y Android nativas o multiplataforma</p>
+                            </div>
+                            <div class="service-box">
+                                <i class="fa-solid fa-code"></i>
+                                <h4>Web Apps</h4>
+                                <p>Aplicaciones web progresivas y responsivas</p>
+                            </div>
+                            <div class="service-box">
+                                <i class="fa-solid fa-plug"></i>
+                                <h4>APIs e Integraciones</h4>
+                                <p>Conexión con sistemas existentes</p>
+                            </div>
+                            <div class="service-box">
+                                <i class="fa-solid fa-palette"></i>
+                                <h4>UX/UI Design</h4>
+                                <p>Diseño centrado en el usuario</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tab: Análisis de Datos -->
+                <div class="tab-pane" id="tab-datos">
+                    <div class="dashboard-card service-card">
+                        <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80');">
+                            <div class="service-overlay"></div>
+                        </div>
+                        <div class="card-header">
+                            <i class="fa-solid fa-chart-line icon-green"></i>
+                            <h3>Análisis de Datos y Business Intelligence</h3>
+                        </div>
+                        <p>Transformamos tus datos en información valiosa para la toma de decisiones. Implementamos soluciones de BI que te permiten visualizar, analizar y aprovechar al máximo tu información.</p>
+                        
+                        <div class="data-services">
+                            <div class="data-item">
+                                <i class="fa-solid fa-chart-pie"></i>
+                                <div>
+                                    <h4>Dashboards Interactivos</h4>
+                                    <p>Visualización en tiempo real de tus KPIs y métricas clave</p>
+                                </div>
+                            </div>
+                            <div class="data-item">
+                                <i class="fa-solid fa-database"></i>
+                                <div>
+                                    <h4>Data Warehousing</h4>
+                                    <p>Almacenamiento y organización eficiente de grandes volúmenes de datos</p>
+                                </div>
+                            </div>
+                            <div class="data-item">
+                                <i class="fa-solid fa-magnifying-glass-chart"></i>
+                                <div>
+                                    <h4>Reportes Automatizados</h4>
+                                    <p>Informes programados y distribuidos automáticamente</p>
+                                </div>
+                            </div>
+                            <div class="data-item">
+                                <i class="fa-solid fa-brain"></i>
+                                <div>
+                                    <h4>Predictive Analytics</h4>
+                                    <p>Modelos predictivos para anticipar tendencias y comportamientos</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -487,38 +615,14 @@
             </div>
         </section>
 
-        <!-- DIFERENCIA -->
-        <section id="diferencia" class="page">
-            <div class="dashboard-card highlight-card">
-                <h2><i class="fa-solid fa-star"></i> ¿Cómo lo hacemos Diferente?</h2>
-                <div class="difference-grid">
-                    <div class="diff-item">
-                        <i class="fa-solid fa-bullseye"></i>
-                        <h3>Resultados, no solo tecnología</h3>
-                        <p>Sabemos que las personas no compran tecnología, compran resultados. Nos enfocamos en que nuestros servicios sean claros y sin complicaciones.</p>
-                    </div>
-                    <div class="diff-item">
-                        <i class="fa-solid fa-puzzle-piece"></i>
-                        <h3>Adaptabilidad total</h3>
-                        <p>Creamos soluciones que se adaptan a ti, facilitando su uso desde el primer momento.</p>
-                    </div>
-                    <div class="diff-item">
-                        <i class="fa-solid fa-handshake"></i>
-                        <h3>Acompañamiento humano</h3>
-                        <p>Te acompañamos siempre, porque la confianza y el servicio humano son nuestra prioridad.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- CONTACTO -->
         <section id="contacto" class="page">
             <div class="dashboard-card">
                 <h2><i class="fa-solid fa-paper-plane"></i> Contáctenos</h2>
                 <div class="contact-grid">
-                    <a href="mailto:ingenieria@tittanium.co" class="contact-item">
+                    <a href="mailto:comercial@tittanium.co" class="contact-item">
                         <i class="fa-solid fa-envelope"></i>
-                        <div><strong>Correo</strong><span>ingenieria@tittanium.co</span></div>
+                        <div><strong>Correo</strong><span>comercial@tittanium.co</span></div>
                     </a>
                     <a href="https://maps.google.com/?q=Calle+6+sur+43A-200+Medellin+Colombia" target="_blank" class="contact-item">
                         <i class="fa-solid fa-location-dot"></i>
@@ -532,7 +636,7 @@
                         <i class="fa-brands fa-instagram"></i>
                         <div><strong>Instagram</strong><span>@tittanium_sas</span></div>
                     </a>
-                    <a href="https://www.linkedin.com/company/tittanium-co/" target="_blank" class="contact-item">
+                    <a href="https://linkedin.com/company/tittanium-sas" target="_blank" class="contact-item">
                         <i class="fa-brands fa-linkedin"></i>
                         <div><strong>LinkedIn</strong><span>Ver perfil</span></div>
                     </a>
