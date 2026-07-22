@@ -69,7 +69,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    mobileBtn.addEventListener('click', openMenu);
+    mobileBtn.addEventListener('click', () => {
+        if (sidebar.classList.contains('active')) {
+            closeMenu();
+        } else {
+            openMenu();
+        }
+    });
     closeMenuBtn.addEventListener('click', closeMenu);
 
     document.querySelectorAll('.nav-links a').forEach(link => {
@@ -181,7 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     {
                         label: 'Nube',
                         data: [7000, 10000, 13000],
-                        backgroundColor: '#10B981',
+                        backgroundColor: '#3d4f39',
                         borderRadius: 8
                     }
                 ]
@@ -199,6 +205,72 @@ document.addEventListener('DOMContentLoaded', () => {
                         beginAtZero: true,
                         ticks: {
                             callback: value => '$' + (value/1000) + 'k'
+                        }
+                    }
+                }
+            }
+        });
+    }
+    
+    // ==========================================
+    // 7b. GRÁFICO DE IMPACTO (Datos / BI)
+    // ==========================================
+    function initImpactChart() {
+        const canvas = document.getElementById('impactChart');
+        if (!canvas) return;
+        
+        const ctx = canvas.getContext('2d');
+        
+        if (window.impactChartInstance) {
+            window.impactChartInstance.destroy();
+        }
+        
+        window.impactChartInstance = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Conversión Leads', 'Ventas Cruzadas', 'Satisfacción Cliente', 'Tickets Repetitivos', 'Tiempo Resolución', 'Deserción Clientes'],
+                datasets: [{
+                    label: 'Mejora (%)',
+                    data: [35, 28, 60, 45, 30, 20],
+                    backgroundColor: [
+                        '#3d4f39',
+                        '#5a6e55',
+                        '#3d4f39',
+                        '#5a6e55',
+                        '#3d4f39',
+                        '#5a6e55'
+                    ],
+                    borderRadius: 6
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                indexAxis: 'y',
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: ctx => (ctx.raw > 0 ? '+' : '') + ctx.raw + '% de mejora'
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        max: 80,
+                        grid: {
+                            display: false
+                        }
+                    },
+                    y: {
+                        grid: {
+                            display: false
+                        },
+                        ticks: {
+                            font: { size: 11 }
                         }
                     }
                 }
@@ -224,6 +296,9 @@ document.addEventListener('DOMContentLoaded', () => {
             
             if (tabId === 'nube') {
                 setTimeout(initChart, 300);
+            }
+            if (tabId === 'datos') {
+                setTimeout(initImpactChart, 300);
             }
         });
     });
