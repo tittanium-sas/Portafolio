@@ -1799,7 +1799,26 @@ body {
 
     .cert-title {
         font-size: 1rem;
-        padding: 0;
+        padding: 0 1.25rem;
+        justify-content: flex-start;
+        text-align: left;
+    }
+
+    .page-header {
+        padding: 0 1.25rem;
+    }
+
+    .services-tabs {
+        margin: 0 1rem 1.5rem;
+        padding: 0.5rem;
+    }
+
+    .page-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .page-header .section-desc {
+        font-size: 0.9rem;
     }
     
     .services-tabs {
