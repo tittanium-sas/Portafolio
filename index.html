@@ -33,6 +33,7 @@
             <li><a href="#" data-page="inicio" class="active"><i class="fa-solid fa-house"></i> <span>Inicio</span></a></li>
             <li><a href="#" data-page="quienes-somos"><i class="fa-solid fa-users"></i> <span>Quiénes Somos</span></a></li>
             <li><a href="#" data-page="servicios"><i class="fa-solid fa-cloud"></i> <span>Servicios</span></a></li>
+            <li><a href="#" data-page="proyectos"><i class="fa-solid fa-briefcase"></i> <span>Proyectos</span></a></li>
             <li><a href="#" data-page="certificaciones"><i class="fa-solid fa-award"></i> <span>Nuestras Certificaciones</span></a></li>
             <li><a href="#" data-page="contacto"><i class="fa-solid fa-envelope"></i> <span>Contacto</span></a></li>
         </ul>
@@ -115,41 +116,48 @@
                 </div>
             </div>
             
-            <!-- Quick Cards - 6 servicios en 2 filas -->
-            <div class="quick-cards">
-                <a href="#" class="quick-card" data-page="servicios" data-tab="nube">
+            <!-- Stats Bar -->
+            <div class="stats-bar">
+                <div class="stat-counter">
                     <i class="fa-solid fa-cloud"></i>
-                    <h3>Servicios en la Nube</h3>
-                    <p>Infraestructura optimizada y segura</p>
-                </a>
-                <a href="#" class="quick-card" data-page="servicios" data-tab="backups">
-                    <i class="fa-solid fa-shield-halved"></i>
-                    <h3>Backups y Continuidad</h3>
-                    <p>Protección real para tu información</p>
-                </a>
-                <a href="#" class="quick-card" data-page="servicios" data-tab="ai">
-                    <i class="fa-solid fa-brain"></i>
-                    <h3>AI Systems</h3>
-                    <p>Inteligencia que agiliza procesos</p>
-                </a>
-                <a href="#" class="quick-card" data-page="servicios" data-tab="odoo">
-                    <i class="fa-solid fa-database"></i>
-                    <h3>ERP Odoo</h3>
-                    <p>Gestión integral de tu empresa</p>
-                </a>
-                <a href="#" class="quick-card" data-page="servicios" data-tab="apps">
-                    <i class="fa-solid fa-mobile-screen"></i>
-                    <h3>Apps a la Medida</h3>
-                    <p>Desarrollo personalizado</p>
-                </a>
-                <a href="#" class="quick-card" data-page="servicios" data-tab="datos">
-                    <i class="fa-solid fa-chart-line"></i>
-                    <h3>Análisis de Datos</h3>
-                    <p>Business Intelligence</p>
-                </a>
+                    <span class="counter-num" data-target="50">0</span><span class="counter-plus">+</span>
+                    <p>Proyectos en Nube</p>
+                </div>
+                <div class="stat-counter">
+                    <i class="fa-solid fa-award"></i>
+                    <span class="counter-num" data-target="10">0</span><span class="counter-plus">+</span>
+                    <p>Certificaciones Azure</p>
+                </div>
+                <div class="stat-counter">
+                    <i class="fa-solid fa-star"></i>
+                    <span class="counter-num" data-target="90">0</span><span class="counter-plus">%</span>
+                    <p>Satisfacción Cliente</p>
+                </div>
+                <div class="stat-counter">
+                    <i class="fa-solid fa-calendar"></i>
+                    <span class="counter-num" data-target="10">0</span><span class="counter-plus">+</span>
+                    <p>Años de Experiencia</p>
+                </div>
+            </div>
+            
+            <!-- Aliados Tecnológicos - Marquee -->
+            <div class="partners-marquee">
+                <div class="partners-marquee-inner">
+                    <img src="img/aliados/microsoft logo.png" alt="Microsoft" class="partner-logo">
+                    <img src="img/aliados/acronis logo.png" alt="Acronis" class="partner-logo">
+                    <img src="img/aliados/odoo logo.png" alt="Odoo" class="partner-logo">
+                    <img src="img/aliados/Openai logo.png" alt="OpenAI" class="partner-logo">
+                    <img src="img/aliados/Claude logo.png" alt="Claude" class="partner-logo">
+                    <!-- Duplicados para efecto infinito -->
+                    <img src="img/aliados/microsoft logo.png" alt="Microsoft" class="partner-logo">
+                    <img src="img/aliados/acronis logo.png" alt="Acronis" class="partner-logo">
+                    <img src="img/aliados/odoo logo.png" alt="Odoo" class="partner-logo">
+                    <img src="img/aliados/Openai logo.png" alt="OpenAI" class="partner-logo">
+                    <img src="img/aliados/Claude logo.png" alt="Claude" class="partner-logo">
+                </div>
             </div>
         </section>
-
+        
         <!-- QUIENES SOMOS -->
         <section id="quienes-somos" class="page">
             <div class="dashboard-card">
@@ -188,8 +196,36 @@
                     </div>
                 </div>
             </div>
+            
+            <!-- Industrias que servimos -->
+            <div class="dashboard-card">
+                <h2><i class="fa-solid fa-building"></i> Industrias que Transformamos</h2>
+                <p class="section-desc">Nuestra experiencia abarca múltiples sectores. Cada industria tiene sus retos, y nosotros tenemos las soluciones.</p>
+                <div class="industries-grid">
+                    <div class="industry-card">
+                        <i class="fa-solid fa-hospital"></i>
+                        <h4>Salud</h4>
+                        <p>Telemedicina, historias clínicas en la nube, cumplimiento normativo y protección de datos sensibles.</p>
+                    </div>
+                    <div class="industry-card">
+                        <i class="fa-solid fa-industry"></i>
+                        <h4>Manufactura</h4>
+                        <p>ERP Odoo para control de producción, inventarios, compras y cadena de suministro.</p>
+                    </div>
+                    <div class="industry-card">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <h4>Retail</h4>
+                        <p>E-commerce, análisis de ventas, automatización de marketing y fidelización de clientes.</p>
+                    </div>
+                    <div class="industry-card">
+                        <i class="fa-solid fa-building-columns"></i>
+                        <h4>Financiero</h4>
+                        <p>Infraestructura segura, cumplimiento, BI y dashboards para toma de decisiones.</p>
+                    </div>
+                </div>
+            </div>
         </section>
-
+        
         <!-- SERVICIOS -->
         <section id="servicios" class="page">
             <div class="page-header">
@@ -748,6 +784,160 @@
             </div>
         </section>
 
+        <!-- PROYECTOS -->
+        <section id="proyectos" class="page">
+            <div class="dashboard-card">
+                <h2><i class="fa-solid fa-briefcase"></i> Casos de Éxito</h2>
+                <p class="section-desc">Conoce cómo hemos transformado la tecnología de nuestros clientes en resultados reales para su negocio.</p>
+                
+                <div class="proyectos-grid">
+                    <div class="proyecto-card">
+                        <div class="proyecto-header">
+                            <span class="industry-tag">🏥 Salud</span>
+                        </div>
+                        <div class="proyecto-body">
+                            <h4>Infraestructura Cloud para Clínica</h4>
+                            <p>Migración completa a Azure de una clínica con 5 sedes. Centralizamos sus sistemas, eliminamos caídas recurrentes y redujimos costos de infraestructura en un 38%.</p>
+                        </div>
+                        <div class="proyecto-stats">
+                            <span><strong>38%</strong>Reducción costos</span>
+                            <span><strong>99.9%</strong>Uptime garantizado</span>
+                            <span><strong>5</strong>Sedes integradas</span>
+                            <span><strong>+200</strong>Usuarios</span>
+                        </div>
+                    </div>
+                    
+                    <div class="proyecto-card">
+                        <div class="proyecto-header">
+                            <span class="industry-tag">🏭 Manufactura</span>
+                        </div>
+                        <div class="proyecto-body">
+                            <h4>ERP Odoo para Industria</h4>
+                            <p>Implementación de Odoo con módulos de ventas, compras, inventario, producción y contabilidad. Unificación de procesos que antes estaban en 4 sistemas distintos.</p>
+                        </div>
+                        <div class="proyecto-stats">
+                            <span><strong>40%</strong>Más eficiencia</span>
+                            <span><strong>60%</strong>Menos tareas manuales</span>
+                            <span><strong>1</strong>Plataforma única</span>
+                            <span><strong>4</strong>Sistemas unificados</span>
+                        </div>
+                    </div>
+                    
+                    <div class="proyecto-card">
+                        <div class="proyecto-header">
+                            <span class="industry-tag">🛒 Retail</span>
+                        </div>
+                        <div class="proyecto-body">
+                            <h4>Agente IA para Servicio al Cliente</h4>
+                            <p>Implementamos un asistente inteligente con memoria persistente y aprendizaje automático para resolver PQRs 24/7. Reducción drástica de tickets repetitivos.</p>
+                        </div>
+                        <div class="proyecto-stats">
+                            <span><strong>45%</strong>Menos tickets repetitivos</span>
+                            <span><strong>60%</strong>+ Satisfacción cliente</span>
+                            <span><strong>24/7</strong>Atención continua</span>
+                            <span><strong>3</strong>Canales integrados</span>
+                        </div>
+                    </div>
+                    
+                    <div class="proyecto-card">
+                        <div class="proyecto-header">
+                            <span class="industry-tag">🏫 Educación</span>
+                        </div>
+                        <div class="proyecto-body">
+                            <h4>Virtualización de Laboratorios Universitarios</h4>
+                            <p>Implementamos escritorios virtuales efímeros para laboratorios de clase. Los estudiantes acceden a entornos preconfigurados que se destruyen al finalizar, eliminando costos de mantenimiento y licencias ociosas.</p>
+                        </div>
+                        <div class="proyecto-stats">
+                            <span><strong>60%</strong>Ahorro en infraestructura</span>
+                            <span><strong>500+</strong>Estudiantes beneficiados</span>
+                            <span><strong>0</strong>Mantenimiento físico</span>
+                            <span><strong>100%</strong>Entornos siempre listos</span>
+                        </div>
+                    </div>
+                    
+                    <div class="proyecto-card">
+                        <div class="proyecto-header">
+                            <span class="industry-tag">🛒 E-commerce</span>
+                        </div>
+                        <div class="proyecto-body">
+                            <h4>Autoescalamiento para Black Friday</h4>
+                            <p>Arquitectura de autoescalamiento en Azure para absorber picos de demanda en temporada alta sin sobredimensionar. El sistema escala automáticamente durante los picos y reduce recursos en horas valle.</p>
+                        </div>
+                        <div class="proyecto-stats">
+                            <span><strong>40%</strong>Menos costo en horas valle</span>
+                            <span><strong>300%</strong>Pico absorbido sin caídas</span>
+                            <span><strong>99.9%</strong>Disponibilidad en campaña</span>
+                            <span><strong>0</strong>Intervenciones manuales</span>
+                        </div>
+                    </div>
+                    
+                    <div class="proyecto-card">
+                        <div class="proyecto-header">
+                            <span class="industry-tag">🛡️ Ciberseguridad</span>
+                        </div>
+                        <div class="proyecto-body">
+                            <h4>Recuperación ante Ransomware con Acronis</h4>
+                            <p>Cliente afectado por un ataque de ransomware. Gracias a las copias de seguridad en Acronis Cloud, recuperamos toda la información crítica en cuestión de horas sin pagar rescate.</p>
+                        </div>
+                        <div class="proyecto-stats">
+                            <span><strong>100%</strong>Datos recuperados</span>
+                            <span><strong>4h</strong>Tiempo de recuperación</span>
+                            <span><strong>$0</strong>Pagado en rescate</span>
+                            <span><strong>24h</strong>Operación normal</span>
+                        </div>
+                    </div>
+                    
+                    <div class="proyecto-card">
+                        <div class="proyecto-header">
+                            <span class="industry-tag">🤖 IA</span>
+                        </div>
+                        <div class="proyecto-body">
+                            <h4>Autoescalamiento en Azure para IA</h4>
+                            <p>Implementamos máquinas virtuales con autoescalamiento para cargas de trabajo de inteligencia artificial. Los recursos se activan solo cuando se necesitan, reduciendo costos significativamente.</p>
+                        </div>
+                        <div class="proyecto-stats">
+                            <span><strong>40%</strong>Reducción de costos</span>
+                            <span><strong>+200%</strong>Capacidad bajo demanda</span>
+                            <span><strong>0</strong>Recursos ociosos</span>
+                            <span><strong>GPUs</strong>Bajo demanda</span>
+                        </div>
+                    </div>
+                    
+                    <div class="proyecto-card">
+                        <div class="proyecto-header">
+                            <span class="industry-tag">📊 BI</span>
+                        </div>
+                        <div class="proyecto-body">
+                            <h4>Centralización de Datos con Power BI</h4>
+                            <p>Unificamos múltiples fuentes de datos (ERP, CRM, archivos Excel) en un solo modelo de Power BI. La empresa pasó de perder días consolidando información a tener dashboards actualizados en tiempo real.</p>
+                        </div>
+                        <div class="proyecto-stats">
+                            <span><strong>90%</strong>Menos tiempo en reportes</span>
+                            <span><strong>6</strong>Fuentes unificadas</span>
+                            <span><strong>1</strong>Dashboard central</span>
+                            <span><strong>+30%</strong>Mejora en decisiones</span>
+                        </div>
+                    </div>
+                    
+                    <div class="proyecto-card">
+                        <div class="proyecto-header">
+                            <span class="industry-tag">🏢 Corporativo</span>
+                        </div>
+                        <div class="proyecto-body">
+                            <h4>Directorio Activo Multisede</h4>
+                            <p>Implementamos Active Directory en 4 sedes del cliente, integrando dispositivos corporativos y personales (BYOD) con políticas de acceso y aplicaciones gestionadas centralizadamente.</p>
+                        </div>
+                        <div class="proyecto-stats">
+                            <span><strong>4</strong>Sedes integradas</span>
+                            <span><strong>300+</strong>Dispositivos gestionados</span>
+                            <span><strong>100%</strong>Políticas unificadas</span>
+                            <span><strong>BYOD</strong>Soportado</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
         <!-- CERTIFICACIONES -->
         <section id="certificaciones" class="page">
             <div class="dashboard-card">
@@ -821,17 +1011,95 @@
                     </a>
                     <a href="https://wa.me/573216362185" target="_blank" class="contact-item whatsapp">
                         <i class="fa-brands fa-whatsapp"></i>
-                        <div><strong>WhatsApp</strong><span>+573216362185</span></div>
+                        <div><strong>WhatsApp</strong><span>+573****2185</span></div>
                     </a>
                 </div>
             </div>
+            
+            <!-- Testimonios -->
+            <div class="testimonios-section">
+                <h2><i class="fa-solid fa-comments"></i> Lo que dicen nuestros clientes</h2>
+                <div class="testimonios-track">
+                    <div class="testimonio-card">
+                        <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                        <p>"Tittanium transformó nuestra infraestructura de TI. Pasamos de tener caídas semanales a un 99.9% de disponibilidad. Su equipo entiende el negocio, no solo la tecnología."</p>
+                        <div class="testimonio-author">
+                            <div class="author-avatar">JM</div>
+                            <div class="author-info">
+                                <h5>Juan Martínez</h5>
+                                <span>Director TI · Clínica Privada</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonio-card">
+                        <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                        <p>"Implementaron Odoo en tiempo récord. Unificamos ventas, compras e inventario en una sola plataforma. Ahora tenemos visibilidad real de nuestro negocio en tiempo real."</p>
+                        <div class="testimonio-author">
+                            <div class="author-avatar">CG</div>
+                            <div class="author-info">
+                                <h5>Carolina Gómez</h5>
+                                <span>Gerente Operaciones · Industria</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonio-card">
+                        <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                        <p>"El agente de IA que nos implementaron resolvió el 60% de las consultas de clientes de forma automática. Nuestro equipo ahora se enfoca en lo importante: vender."</p>
+                        <div class="testimonio-author">
+                            <div class="author-avatar">AR</div>
+                            <div class="author-info">
+                                <h5>Andrés Restrepo</h5>
+                                <span>CEO · Retail Online</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonio-card">
+                        <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                        <p>"La virtualización de escritorios nos permitió ofrecer laboratorios actualizados a todos los estudiantes sin la carga de mantener equipos físicos. Una solución que transformó nuestra forma de enseñar."</p>
+                        <div class="testimonio-author">
+                            <div class="author-avatar">ML</div>
+                            <div class="author-info">
+                                <h5>María Lucía Pérez</h5>
+                                <span>Directora de TI · Educación</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonio-card">
+                        <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                        <p>"Sufrimos un ataque de ransomware y en menos de 4 horas estábamos operando de nuevo gracias a las copias de Acronis. Perdimos cero datos y cero dinero en rescates."</p>
+                        <div class="testimonio-author">
+                            <div class="author-avatar">FG</div>
+                            <div class="author-info">
+                                <h5>Fernando Giraldo</h5>
+                                <span>Gerente de Operaciones · Financiero</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonio-card">
+                        <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                        <p>"Centralizamos 6 fuentes de datos distintas en Power BI. Pasamos de perder días armando reportes a tener toda la información actualizada al instante. Las decisiones ahora se toman con datos reales."</p>
+                        <div class="testimonio-author">
+                            <div class="author-avatar">DV</div>
+                            <div class="author-info">
+                                <h5>Diana Velásquez</h5>
+                                <span>Directora de Analytics · Corporativo</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
-
+        
         <footer class="footer">
             <p>&copy; 2026 Tittanium. Todos los derechos reservados.</p>
         </footer>
     </main>
 
     <script src="portafolio.js"></script>
+    
+    <!-- CTA Flotante WhatsApp -->
+    <a href="https://wa.me/573216362185" target="_blank" class="whatsapp-float" title="WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
 </body>
 </html>

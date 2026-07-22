@@ -140,6 +140,25 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }, 16);
         });
+        
+        // También animar contadores del stats-bar
+        const counters = document.querySelectorAll('.counter-num');
+        counters.forEach(num => {
+            const target = parseInt(num.getAttribute('data-target'));
+            const duration = 1500;
+            const step = target / (duration / 16);
+            let current = 0;
+            
+            const timer = setInterval(() => {
+                current += step;
+                if (current >= target) {
+                    num.textContent = target;
+                    clearInterval(timer);
+                } else {
+                    num.textContent = Math.floor(current);
+                }
+            }, 16);
+        });
     };
 
     // ==========================================
