@@ -230,6 +230,7 @@ body {
     padding: 2.5rem;
     background: var(--bg-main);
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 /* PAGES */
@@ -1863,11 +1864,9 @@ body {
 }
 .testimonios-section h2 i { color: var(--primary); }
 .testimonios-track {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
     padding-bottom: 1rem;
 }
 .testimonios-track::-webkit-scrollbar { height: 4px; }
@@ -1876,7 +1875,7 @@ body {
     border-radius: 4px;
 }
 .testimonio-card {
-    flex: 0 0 350px;
+    flex: 0 0 320px;
     scroll-snap-align: start;
     padding: 2rem;
     background: var(--bg-white);
@@ -2111,15 +2110,23 @@ body {
     .proyectos-grid {
         grid-template-columns: 1fr;
     }
+    .testimonios-section h2 {
+        font-size: 1.2rem;
+    }
+    .testimonios-track {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        gap: 1rem;
+        grid-template-columns: none;
+    }
     .testimonio-card {
         flex: 0 0 280px;
         padding: 1.5rem;
     }
     .testimonios-section {
         padding: 1.5rem 1rem;
-    }
-    .testimonios-section h2 {
-        font-size: 1.2rem;
     }
     .blog-grid {
         grid-template-columns: 1fr;
