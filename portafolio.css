@@ -2019,8 +2019,9 @@ body {
     animation-play-state: paused;
 }
 .partner-logo {
-    height: 40px;
+    height: 60px;
     width: auto;
+    max-width: 160px;
     object-fit: contain;
     filter: grayscale(100%);
     opacity: 0.6;
@@ -2113,6 +2114,12 @@ body {
     .testimonio-card {
         flex: 0 0 280px;
         padding: 1.5rem;
+    }
+    .testimonios-section {
+        padding: 1.5rem 1rem;
+    }
+    .testimonios-section h2 {
+        font-size: 1.2rem;
     }
     .blog-grid {
         grid-template-columns: 1fr;

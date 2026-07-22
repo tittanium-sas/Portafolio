@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                if (entry.target.classList.contains('stat-number')) {
+                if (entry.target.classList.contains('stat-number') || entry.target.classList.contains('counter-num')) {
                     animateNumbers();
                 }
                 entry.target.classList.add('visible');
@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, { threshold: 0.1 });
 
-    document.querySelectorAll('.stat-number, .dashboard-card').forEach(el => {
+    document.querySelectorAll('.stat-number, .counter-num, .dashboard-card').forEach(el => {
         observer.observe(el);
     });
 
