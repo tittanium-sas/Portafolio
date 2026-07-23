@@ -847,9 +847,13 @@ body {
 .chart-globe-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 2.75rem;
     align-items: stretch;
     margin: 1.5rem 2rem;
+}
+
+.chart-globe-wrapper .azure-globe-card {
+    margin-top: 3rem;
 }
 
 /* Backups Advantages - Alineación en dos filas */
