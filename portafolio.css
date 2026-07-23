@@ -848,8 +848,9 @@ body {
 /* Chart + Globe wrapper */
 .chart-globe-wrapper {
     display: flex;
+    flex-direction: column;
     gap: 2rem;
-    align-items: flex-start;
+    align-items: stretch;
     margin: 1.5rem 2rem;
 }
 
