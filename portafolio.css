@@ -841,8 +841,6 @@ body {
 .chart-container {
     padding: 1.5rem 2rem;
     height: 300px;
-    flex: 1;
-    max-width: 500px;
 }
 
 /* Chart + Globe wrapper */
@@ -1547,8 +1545,6 @@ body {
     transition: all 0.3s;
     text-decoration: none;
     border: 1px solid rgba(255,255,255,0.1);
-    max-width: 300px;
-    flex-shrink: 0;
 }
 .azure-globe-card:hover {
     transform: translateY(-4px);
