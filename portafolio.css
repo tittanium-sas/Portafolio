@@ -1284,6 +1284,16 @@ body {
     max-width: 130px;
 }
 
+/* --- Stat description (small context) --- */
+.stat-desc {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    margin-top: 0.15rem;
+    font-weight: 400;
+    font-style: italic;
+    opacity: 0.8;
+}
+
 /* --- Tech Badge --- */
 .tech-badge {
     display: inline-flex;
