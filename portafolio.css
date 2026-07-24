@@ -10,7 +10,16 @@
     --border: #E0E0E0;
     --shadow: 0 2px 8px rgba(0,0,0,0.04);
     --shadow-hover: 0 6px 16px rgba(0,0,0,0.08);
+    --shadow-card: 0 1px 3px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.03);
+    --shadow-card-hover: 0 4px 12px rgba(61,79,57,0.08), 0 12px 28px rgba(61,79,57,0.06);
+    --shadow-btn: 0 4px 12px rgba(61,79,57,0.25);
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-out-quart: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-fast: 0.2s var(--ease-out-expo);
+    --transition-base: 0.3s var(--ease-out-expo);
+    --transition-slow: 0.5s var(--ease-out-expo);
     --radius: 16px;
+    --radius-sm: 10px;
     --sidebar-width: 280px;
     
     /* Variables del sidebar */
@@ -56,7 +65,15 @@ body {
     display: flex;
     min-height: 100vh;
     overflow-x: hidden;
-    transition: background-color 0.3s, color 0.3s;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    transition: background-color var(--transition-base), color var(--transition-base);
+}
+
+::selection {
+    background: rgba(61,79,57,0.18);
+    color: var(--text-primary);
 }
 
 /* Logo móvil */
@@ -119,23 +136,34 @@ body {
     align-items: center;
     gap: 1rem;
     padding: 0.875rem 1rem;
-    border-radius: 12px;
+    border-radius: var(--radius-sm);
     text-decoration: none;
     color: var(--text-sidebar);
     font-weight: 500;
-    transition: all 0.2s;
+    transition: all var(--transition-fast);
     background: transparent;
+    position: relative;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
-    background: rgba(61, 79, 57, 0.15);
+    background: rgba(61, 79, 57, 0.12);
     color: var(--primary);
+}
+
+.nav-links a.active {
+    background: rgba(61, 79, 57, 0.15);
+    font-weight: 600;
 }
 
 .nav-links a i {
     width: 24px;
     font-size: 1.25rem;
+    transition: transform var(--transition-fast);
+}
+
+.nav-links a:hover i {
+    transform: scale(1.1);
 }
 
 /* Sidebar Footer */
@@ -161,13 +189,19 @@ body {
     text-decoration: none;
     font-weight: 600;
     width: 100%;
-    transition: all 0.3s;
-    box-shadow: 0 4px 12px rgba(61, 79, 57, 0.25);
+    transition: all var(--transition-fast);
+    box-shadow: var(--shadow-btn);
+    letter-spacing: 0.01em;
 }
 
 .whatsapp-btn-large:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(61, 79, 57, 0.35);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(61, 79, 57, 0.35);
+    background: var(--primary-dark);
+}
+
+.whatsapp-btn-large:active {
+    transform: translateY(-1px);
 }
 
 .footer-icons {
@@ -244,9 +278,16 @@ body {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
+    from { opacity: 0; transform: translateY(24px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
+@keyframes fadeInTab {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* HERO BANNER */
 
 /* HERO BANNER - Tamaño exacto de GitHub */
 .hero-banner {
@@ -259,17 +300,18 @@ body {
     align-items: center;
     position: relative;
     overflow: hidden;
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-card);
     border: 1px solid var(--border);
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
 }
 
 .hero-content h1 {
     font-size: 3rem;
     color: var(--text-primary);
-    line-height: 1.2;
+    line-height: 1.15;
     margin-bottom: 1rem;
     font-weight: 800;
+    letter-spacing: -0.03em;
 }
 
 .highlight {
@@ -277,9 +319,9 @@ body {
 }
 
 .hero-content p {
-    color: var(--text-muted);
+    color: var(--text-secondary);
     font-size: 1.125rem;
-    line-height: 1.7;
+    line-height: 1.75;
     margin-bottom: 2rem;
 }
 
@@ -296,19 +338,26 @@ body {
     background: var(--primary);
     color: white;
     padding: 1rem 2rem;
-    border-radius: 12px;
+    border-radius: var(--radius-sm);
     text-decoration: none;
     font-weight: 600;
     font-size: 1rem;
-    transition: all 0.3s;
-    box-shadow: 0 4px 12px rgba(61, 79, 57, 0.25);
+    transition: all var(--transition-fast);
+    box-shadow: var(--shadow-btn);
     border: none;
+    cursor: pointer;
+    letter-spacing: 0.01em;
 }
 
 .btn-primary:hover {
     background: var(--primary-dark);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(61, 79, 57, 0.35);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(61, 79, 57, 0.35);
+}
+
+.btn-primary:active {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(61, 79, 57, 0.25);
 }
 
 .btn-secondary {
@@ -318,17 +367,23 @@ body {
     background: transparent;
     color: var(--primary);
     padding: 1rem 2rem;
-    border-radius: 12px;
+    border-radius: var(--radius-sm);
     text-decoration: none;
     font-weight: 600;
     font-size: 1rem;
     border: 2px solid var(--primary);
-    transition: all 0.3s;
+    transition: all var(--transition-fast);
+    cursor: pointer;
 }
 
 .btn-secondary:hover {
-    background: rgba(61, 79, 57, 0.05);
-    transform: translateY(-2px);
+    background: rgba(61, 79, 57, 0.06);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(61, 79, 57, 0.12);
+}
+
+.btn-secondary:active {
+    transform: translateY(-1px);
 }
 
 /* Hero Visual */
@@ -411,10 +466,10 @@ body {
     gap: 1rem;
     padding: 1.5rem 1rem;
     background: var(--bg-white);
-    border-radius: 12px;
+    border-radius: var(--radius-sm);
     border: 1px solid var(--border);
-    box-shadow: var(--shadow);
-    transition: all 0.3s ease;
+    box-shadow: var(--shadow-card);
+    transition: all var(--transition-fast);
     cursor: pointer;
 }
 
@@ -606,8 +661,13 @@ body {
     border-radius: var(--radius);
     padding: 2.5rem;
     margin-bottom: 2rem;
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-card);
     border: 1px solid var(--border);
+    transition: box-shadow var(--transition-base);
+}
+
+.dashboard-card:hover {
+    box-shadow: var(--shadow-card-hover);
 }
 
 .dashboard-card h2 {
@@ -719,12 +779,12 @@ body {
     padding: 1rem 1.5rem;
     background: var(--bg-main);
     border: 2px solid transparent;
-    border-radius: 12px;
+    border-radius: var(--radius-sm);
     font-size: 0.95rem;
     font-weight: 600;
     color: var(--text-secondary);
     cursor: pointer;
-    transition: all 0.3s;
+    transition: all var(--transition-fast);
     font-family: 'Inter', sans-serif;
 }
 
@@ -799,6 +859,8 @@ body {
 .service-card > p {
     padding: 1rem 2rem;
     color: var(--text-secondary);
+    line-height: 1.7;
+    font-size: 0.95rem;
 }
 
 /* Stats Grid */
@@ -814,9 +876,16 @@ body {
 
 .stat-item {
     text-align: center;
-    padding: 1rem;
+    padding: 1.25rem 0.75rem;
     background: var(--bg-white);
-    border-radius: 8px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border);
+    transition: all var(--transition-fast);
+}
+
+.stat-item:hover {
+    box-shadow: var(--shadow-card-hover);
+    transform: translateY(-2px);
 }
 
 .stat-number {
@@ -1139,18 +1208,18 @@ body {
     gap: 1rem;
     padding: 1.25rem;
     background: var(--bg-main);
-    border-radius: 12px;
+    border-radius: var(--radius-sm);
     text-decoration: none;
     color: inherit;
-    transition: all 0.3s;
+    transition: all var(--transition-fast);
     border: 1px solid var(--border);
 }
 
 .contact-item:hover {
     background: var(--primary);
     color: white;
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(61, 79, 57, 0.2);
 }
 
 .contact-item i {
@@ -1674,12 +1743,12 @@ body {
 }
 .stat-counter {
     text-align: center;
-    padding: 1.5rem 1rem;
+    padding: 1.8rem 1rem;
     background: var(--bg-white);
-    border-radius: 16px;
+    border-radius: var(--radius);
     border: 1px solid var(--border);
-    box-shadow: var(--shadow);
-    transition: all 0.3s;
+    box-shadow: var(--shadow-card);
+    transition: all var(--transition-fast);
 }
 .stat-counter:hover {
     transform: translateY(-3px);
@@ -1810,11 +1879,11 @@ body {
 }
 .proyecto-card {
     background: var(--bg-white);
-    border-radius: 16px;
+    border-radius: var(--radius);
     border: 1px solid var(--border);
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-card);
     overflow: hidden;
-    transition: all 0.3s;
+    transition: all var(--transition-fast);
 }
 .proyecto-card:hover {
     transform: translateY(-4px);
@@ -1902,10 +1971,10 @@ body {
     scroll-snap-align: start;
     padding: 2rem;
     background: var(--bg-white);
-    border-radius: 16px;
+    border-radius: var(--radius);
     border: 1px solid var(--border);
-    box-shadow: var(--shadow);
-    transition: all 0.3s;
+    box-shadow: var(--shadow-card);
+    transition: all var(--transition-fast);
 }
 .testimonio-card:hover {
     transform: translateY(-3px);
